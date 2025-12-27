@@ -1,0 +1,10 @@
+use oops for:-
+Real world entities,memory management
+
+inheritance-generalized and distributed
+using virtual we can override parents constructor 
+Q1)how to create a data model to manage suspect prospect and account
+Q2)exam scheduler
+Practice questions from github too
+
+normal c# test

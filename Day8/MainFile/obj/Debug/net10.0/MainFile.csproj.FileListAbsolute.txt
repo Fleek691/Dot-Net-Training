@@ -1,0 +1,12 @@
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\bin\Debug\net10.0\MainFile.exe
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\bin\Debug\net10.0\MainFile.deps.json
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\bin\Debug\net10.0\MainFile.runtimeconfig.json
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\bin\Debug\net10.0\MainFile.dll
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\bin\Debug\net10.0\MainFile.pdb
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\MainFile.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\MainFile.csproj.CoreCompileInputs.cache
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\MainFile.dll
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\refint\MainFile.dll
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\MainFile.pdb
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\MainFile.genruntimeconfig.cache
+C:\Users\avish\Desktop\Dot-Net-Training\Day8\MainFile\obj\Debug\net10.0\ref\MainFile.dll

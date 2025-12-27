@@ -1,0 +1,8 @@
+<Solution>
+  <Folder Name="/Day7/">
+    <Project Path="Day7/MultipleInheritance/MultipleInheritance.csproj" />
+  </Folder>
+  <Folder Name="/Day8/">
+    <Project Path="Day8/MainFile/MainFile.csproj" />
+  </Folder>
+</Solution>
