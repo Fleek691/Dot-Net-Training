@@ -5,4 +5,8 @@
   <Folder Name="/Day8/">
     <Project Path="Day8/MainFile/MainFile.csproj" />
   </Folder>
+  <Folder Name="/Day9/">
+    <Project Path="Day9/GenericandStatic/GenericandStatic.csproj" />
+    <Project Path="Day9/Indexer/Indexer.csproj" />
+  </Folder>
 </Solution>
