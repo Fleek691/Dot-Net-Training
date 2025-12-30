@@ -11,7 +11,7 @@ namespace RegEx
             var rx=new Regex
             (
                 patter,RegexOptions.IgnoreCase,
-                TimeSpan.FromMilliseconds(150)
+                TimeSpan.FromMilliseconds(1)//The time written is the limit if cant run within this limit then we get error
             );
             System.Console.WriteLine(rx.IsMatch(input)?"Found":"Not Found");
     }
