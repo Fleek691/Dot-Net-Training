@@ -49,3 +49,4 @@ TestResults/
 # Publish output
 # ========================
 publish/
+*.pdf
