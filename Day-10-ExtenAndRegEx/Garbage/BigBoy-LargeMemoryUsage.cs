@@ -23,5 +23,9 @@ public class BigBoy : IDisposable
 
         // If there were unmanaged resources, they would be freed here
     }
+        ~BigBoy()
+        {
+            Names=null;
+        }
 }
 }

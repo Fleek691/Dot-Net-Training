@@ -1,18 +1,5 @@
 <Solution>
-  <Folder Name="/Day10-ExtenAndRegEx/">
-    <Project Path="Day10-ExtenAndRegEx/Extensions/Extensions.csproj" />
-  </Folder>
-  <Folder Name="/Day10/">
-    <Project Path="Day10/Extensions/Extensions.csproj" />
-  </Folder>
-  <Folder Name="/Day7/">
-    <Project Path="Day7/MultipleInheritance/MultipleInheritance.csproj" />
-  </Folder>
-  <Folder Name="/Day8/">
-    <Project Path="Day8/MainFile/MainFile.csproj" />
-  </Folder>
-  <Folder Name="/Day9/">
-    <Project Path="Day9/GenericandStatic/GenericandStatic.csproj" />
-    <Project Path="Day9/Indexer/Indexer.csproj" />
+  <Folder Name="/Day-10-ExtenAndRegEx/">
+    <Project Path="Day-10-ExtenAndRegEx/CollectionGeneric/CollectionGeneric.csproj" />
   </Folder>
 </Solution>
