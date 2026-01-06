@@ -8,3 +8,22 @@ Q2)exam scheduler
 Practice questions from github too
 
 normal c# test
+serialization
+crlf
+drawback of csv ,xml 
+
+<Student>
+	<name>Avishek</name>
+	<marks>
+		<marks>67</marks>
+		<marks>70</marks>
+		<marks>73</marks>
+		<marks>79</marks>
+	</marks>
+</Student>
+
+
+how to convert an object data into a xml serialize data in c#
+
+Rules-must be public and properties must be public having get and set
+Fields are converted into serialized values not functions

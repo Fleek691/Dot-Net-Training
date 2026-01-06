@@ -2,4 +2,7 @@
   <Folder Name="/Day-10-ExtenAndRegEx/">
     <Project Path="Day-10-ExtenAndRegEx/CollectionGeneric/CollectionGeneric.csproj" />
   </Folder>
+  <Folder Name="/Day-11-Serialization/">
+    <Project Path="Day-11-Serialization/Serialization/Serialization.csproj" />
+  </Folder>
 </Solution>
