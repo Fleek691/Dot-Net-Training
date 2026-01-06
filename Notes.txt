@@ -27,3 +27,6 @@ how to convert an object data into a xml serialize data in c#
 
 Rules-must be public and properties must be public having get and set
 Fields are converted into serialized values not functions
+Xml Schema - XS
+publisher and subscriber
+jSon-better cause can store value in quotes on the lhs and rhs has value

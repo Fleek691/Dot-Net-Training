@@ -1,4 +1,6 @@
 
+using System.Collections;
+
 namespace Serialization{
 public class Student
 {
@@ -7,5 +9,6 @@ public class Student
     public List<int> Marks { get; set; }
 
     public int []? score=new int[3];
+    public ArrayList a;
 }
 }
