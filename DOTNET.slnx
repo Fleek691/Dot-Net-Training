@@ -5,4 +5,8 @@
   <Folder Name="/Day-11-Serialization/">
     <Project Path="Day-11-Serialization/Serialization/Serialization.csproj" />
   </Folder>
+  <Folder Name="/Day-12-Reflection/">
+    <Project Path="Day-12-Reflection/Example/Example.csproj" />
+    <Project Path="Day-12-Reflection/Reflection/Reflection.csproj" />
+  </Folder>
 </Solution>
