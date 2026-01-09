@@ -69,9 +69,24 @@ class Program
         #endregion
 
         #region Delegates
-        ExampleOfDelegate exampleOfDelegate = new ExampleOfDelegate();
-        exampleOfDelegate.DelegateEx1();
+    
+
+        PrintingComapny pc = new PrintingComapny();
+
+        /* Instance method */
+        pc.CustomerChoicePrintMessage = pc.Simple;
+        pc.Print("Avishek");
+
+        /* Switch behavior at runtime */
+        pc.CustomerChoicePrintMessage = pc.NewYear;
+        pc.Print("Avishek");
+
+            /* Switch again */
+        pc.CustomerChoicePrintMessage = pc.Diwali;
+        pc.Print("Avishek");
+
         #endregion
+
     }
 }
 

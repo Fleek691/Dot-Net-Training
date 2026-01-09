@@ -1,24 +1,34 @@
+public delegate string PrintMessage(string message);
 
-    public delegate int DelegateAddFunctionName  (int a, int b);
-    public class ExampleOfDelegate
+public class PrintingComapny
+{
+    
+    public PrintMessage CustomerChoicePrintMessage{get;set;}
+    public void Print(string message)
     {
-        public int a;
-        public int b;
-
-        public void DelegateEx1()
-        {
-            DelegateAddFunctionName delegateVarable = new DelegateAddFunctionName(AddMethod3);
-            System.Console.WriteLine(delegateVarable(1, 2));
-        }
-
-        private int AddMethod3(int a, int b)
-        {
-            return a + b +40;
-        }
-
-
-        private int AddMethod2(int a, int b)
-        {
-            return a + b + 10;
-        }
+        string messageToPrint=CustomerChoicePrintMessage(message);
+        System.Console.WriteLine(messageToPrint);
     }
+    private static string Method1(string message)
+    {
+        return "Welcom";
+    }
+     public string Simple(string message)
+    {
+        return message;
+    }
+
+    public string NewYear(string message)
+    {
+        return "Happy new year "+ message;
+    }
+    public string Diwali(string message)
+    {
+        return "Happy DIwali "+ message;
+    }
+    
+
+    
+
+
+}
