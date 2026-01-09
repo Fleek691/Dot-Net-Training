@@ -8,13 +8,13 @@ class Program
     static void Main()
     {
         #region XML Serialization
-        Student s = new Student
-        {
+        // Student s = new Student
+        // {
             
-            Name = "Avishek",
-            Marks=new List<int>(),
-            score=new int[] {1,2}
-        };
+        //     Name = "Avishek",
+        //     Marks=new List<int>(),
+        //     score=new int[] {1,2}
+        // };
         // //A bit complex but easy
         // XmlSerializer serializer = new XmlSerializer(typeof(Student));
         
@@ -72,18 +72,22 @@ class Program
     
 
         PrintingComapny pc = new PrintingComapny();
+        pc.CustomerChoicePrintMessage=PrintingComapny.MethodsA;
+        pc.CustomerChoicePrintMessage+=PrintingComapny.MethodsB;
+        pc.CustomerChoicePrintMessage+=PrintingComapny.MethodsC;
+        pc.CustomerChoicePrintMessage("Avishek");
 
-        /* Instance method */
-        pc.CustomerChoicePrintMessage = pc.Simple;
-        pc.Print("Avishek");
+        // /* Instance method */
+        // pc.CustomerChoicePrintMessage = pc.Simple;
+        // pc.Print("Avishek");
 
-        /* Switch behavior at runtime */
-        pc.CustomerChoicePrintMessage = pc.NewYear;
-        pc.Print("Avishek");
+        // /* Switch behavior at runtime */
+        // pc.CustomerChoicePrintMessage = pc.NewYear;
+        // pc.Print("Avishek");
 
-            /* Switch again */
-        pc.CustomerChoicePrintMessage = pc.Diwali;
-        pc.Print("Avishek");
+        //     /* Switch again */
+        // pc.CustomerChoicePrintMessage = pc.Diwali;
+        // pc.Print("Avishek");
 
         #endregion
 
