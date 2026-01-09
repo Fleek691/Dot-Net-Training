@@ -1,4 +1,18 @@
 <Solution>
+  <Folder Name="/Day-02-Control/">
+    <Project Path="Day-02-Control/AssignmentLoops/AssignmentLoops.csproj" />
+    <Project Path="Day-02-Control/Assignments/Assignments.csproj" />
+  </Folder>
+  <Folder Name="/Day-03-Oops/">
+    <Project Path="Day-03-Oops/OOPS/OOPS.csproj" />
+  </Folder>
+  <Folder Name="/Day-04-Inheritance/">
+    <Project Path="Day-04-Inheritance/Inheritance/Inheritance.csproj" />
+  </Folder>
+  <Folder Name="/Day-04-Inheritance/Libs/">
+    <Project Path="Day-04-Inheritance/Libs/MathLib/MathLib.csproj" />
+    <Project Path="Day-04-Inheritance/Libs/ScienceLib/ScienceLib.csproj" />
+  </Folder>
   <Folder Name="/Day-10-ExtenAndRegEx/">
     <Project Path="Day-10-ExtenAndRegEx/CollectionGeneric/CollectionGeneric.csproj" />
   </Folder>
