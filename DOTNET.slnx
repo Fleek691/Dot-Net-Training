@@ -23,4 +23,7 @@
     <Project Path="Day-12-Reflection/Example/Example.csproj" />
     <Project Path="Day-12-Reflection/Reflection/Reflection.csproj" />
   </Folder>
+  <Folder Name="/Day-13-Enum/">
+    <Project Path="Day-13-Enum/miscellaneous/miscellaneous.csproj" />
+  </Folder>
 </Solution>
