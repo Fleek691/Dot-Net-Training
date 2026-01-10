@@ -1,41 +1,42 @@
 public class EventExample
 {
-    public delegate void Notify();  // delegate
-        public static event Notify Reached500; // event
-        public static void Main()
-        {
-            Reached500 += ValueReached500Plus;
+    public delegate void Notify();
+    public static event Notify Reached500;
 
-            while (true)
+    public static void Main()
+    {
+        Reached500+=ValueReached500Plus;
+
+        while (true)
+        {
+            System.Console.WriteLine("Enter a value or 'exit' to quit");
+        string? input=Console.ReadLine();
+        if (input.ToLower()=="exit")
+        {
+            break;
+            }
+            else
             {
-                Console.WriteLine("Enter a number (or 'exit' to quit): ");
-                string input = Console.ReadLine();
-                if (input.ToLower() == "exit")
-                    break;
+                int n=int.Parse(input);
                 try
                 {
-                    Console.WriteLine("Enter value a Value ");
-                    var num = int.Parse(Console.ReadLine());
-                    if (num > 500)
+                    if (n > 500)
                     {
                         Reached500();
                     }
-                    num = 0;
-
+                    n=0;
                 }
-                catch (FormatException)
+                catch(FormatException)
                 {
-                    Console.WriteLine("Invalid input. Please enter a valid number.");
+                    System.Console.WriteLine("Invalid input.");
                 }
-
-                
-                   
-                
             }
         }
+        
+    }
 
-        private static void ValueReached500Plus()
-        {
-            Console.WriteLine("Yes Reached 500 or 500 plus please note");
-        }
+    private static void ValueReached500Plus()
+    {
+        System.Console.WriteLine("Reached 500");
+    }
 }
