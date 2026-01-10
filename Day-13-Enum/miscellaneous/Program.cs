@@ -45,11 +45,16 @@
         {
             System.Console.WriteLine("Error "+ex.Message);
         }
+
+        // Demonstrating Exception Sequence
+        Console.WriteLine("\nDemonstrating Exception Sequence:");
+        ExceptionSequence.DemonstrateExceptionSequence();
+        #endregion
     }
 
 
 
-        private static int Divide(int a,int b)
+    private static int Divide(int a,int b)
     {
         try
         {
@@ -60,7 +65,6 @@
             throw new AppCustomeException();
         }
     }
-        #endregion
         
         
         }
