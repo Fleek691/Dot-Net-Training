@@ -30,3 +30,7 @@ Fields are converted into serialized values not functions
 Xml Schema - XS
 publisher and subscriber
 jSon-better cause can store value in quotes on the lhs and rhs has value
+
+Anonymus Data Types are created by Microsoft they do not have any names<--Very very important
+a model(class) if we need to hide a property we make a new model called view model just for specifying what to display
+thus we use anonymus to save memory as it only displays what parameters are used
