@@ -29,4 +29,10 @@
   <Folder Name="/Day-14-LINQ/">
     <Project Path="Day-14-LINQ/Linq/Linq.csproj" />
   </Folder>
+  <Folder Name="/Day-15-Generic-And-Threads/">
+    <Project Path="Day-15-Generic-And-Threads/GenericMethodAndDelegateTypes/GenericMethod.csproj" />
+  </Folder>
+  <Folder Name="/Day-15-Generic-And-Threads/Threads/">
+    <Project Path="Day-15-Generic-And-Threads/Threads/threads.csproj" />
+  </Folder>
 </Solution>

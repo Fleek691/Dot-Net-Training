@@ -34,3 +34,14 @@ jSon-better cause can store value in quotes on the lhs and rhs has value
 Anonymus Data Types are created by Microsoft they do not have any names<--Very very important
 a model(class) if we need to hide a property we make a new model called view model just for specifying what to display
 thus we use anonymus to save memory as it only displays what parameters are used
+
+Collection
+    |
+   \/
+Generics(similary operation and type specific)
+Linq -used for better understanding and faster
+Eg-from s in student
+	(all the filtering and operations)
+	select 
+	
+Delegate types->Predicate and Action

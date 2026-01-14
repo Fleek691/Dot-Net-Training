@@ -9,7 +9,8 @@ public class Program
         
         // BasicAndStudentExample();
         // LinqProcessExample();
-        MarksCalculation();        
+        // MarksCalculation();        
+        LearnLinq.RunDemo();
     }
 
     private static void MarksCalculation()
