@@ -32,9 +32,11 @@
         
         #region Async and Await
         AsAnAw a=new AsAnAw();
-        string result=await a.FetchData("https://jsonplaceholder.typicode.com/todos/1");
+        Task result=a.FetchData("https://jsonplaceholder.typicode.com/todos/1");
+        Task task2=a.SimpleDelayAsync();
+        await Task.WhenAll(result,task2);
         System.Console.WriteLine(result);
-        await a.SimpleDelayAsync();
+        
 
         
 

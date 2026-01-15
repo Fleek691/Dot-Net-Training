@@ -35,4 +35,7 @@
   <Folder Name="/Day-15-Generic-And-Threads/Threads/">
     <Project Path="Day-15-Generic-And-Threads/Threads/threads.csproj" />
   </Folder>
+  <Folder Name="/Day-16-PracticeQuestions/">
+    <Project Path="Day-16-PracticeQuestions/Questions/Questions.csproj" />
+  </Folder>
 </Solution>
