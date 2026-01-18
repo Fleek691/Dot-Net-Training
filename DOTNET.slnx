@@ -38,4 +38,8 @@
   <Folder Name="/Day-16-PracticeQuestions/">
     <Project Path="Day-16-PracticeQuestions/Questions/Questions.csproj" />
   </Folder>
+  <Folder Name="/Day-17-MoreQuestions/" />
+  <Folder Name="/Day-17-MoreQuestions/Questions/">
+    <Project Path="Day-17-MoreQuestions/Questions/Ques.csproj" />
+  </Folder>
 </Solution>
