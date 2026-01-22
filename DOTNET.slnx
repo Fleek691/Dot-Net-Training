@@ -42,4 +42,7 @@
   <Folder Name="/Day-17-MoreQuestions/Questions/">
     <Project Path="Day-17-MoreQuestions/Questions/Ques.csproj" />
   </Folder>
+  <Folder Name="/Day-18-Attributes/">
+    <Project Path="Day-18-Attributes/Att/Att.csproj" />
+  </Folder>
 </Solution>
