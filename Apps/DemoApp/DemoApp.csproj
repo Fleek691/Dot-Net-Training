@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="../../Day-04-Inheritance/Libs/MathLib/MathLib.csproj" />
+    <ProjectReference Include="../../Day-04-Inheritance/Libs/ScienceLib/ScienceLib.csproj" />
+  </ItemGroup>
+
 </Project>

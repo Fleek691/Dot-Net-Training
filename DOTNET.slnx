@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/Apps/">
+    <Project Path="Apps/DemoApp/DemoApp.csproj" />
+  </Folder>
   <Folder Name="/Day-02-Control/">
     <Project Path="Day-02-Control/AssignmentLoops/AssignmentLoops.csproj" />
     <Project Path="Day-02-Control/Assignments/Assignments.csproj" />
@@ -13,11 +16,30 @@
     <Project Path="Day-04-Inheritance/Libs/MathLib/MathLib.csproj" />
     <Project Path="Day-04-Inheritance/Libs/ScienceLib/ScienceLib.csproj" />
   </Folder>
+  <Folder Name="/Day-05-Abstract-Inheri/">
+    <Project Path="Day-05-Abstract-Inheri/Abstract/Abstract.csproj" />
+  </Folder>
+  <Folder Name="/Day-06-Interface/">
+    <Project Path="Day-06-Interface/Interface/Interface.csproj" />
+    <Project Path="Day-06-Interface/MultipleInheritance/MultipleInheritance.csproj" />
+  </Folder>
+  <Folder Name="/Day-07-Multiplnheritance/">
+    <Project Path="Day-07-Multiplnheritance/MultipleInheritance/MultipleInheritance.csproj" />
+  </Folder>
+  <Folder Name="/Day-08-FolderStruct/">
+    <Project Path="Day-08-FolderStruct/MainFile/MainFile.csproj" />
+  </Folder>
+  <Folder Name="/Day-09-Indexer-Static/">
+    <Project Path="Day-09-Indexer-Static/Indexer/Indexer.csproj" />
+    <Project Path="Day-09-Indexer-Static/GenericandStatic/GenericandStatic.csproj" />
+  </Folder>
   <Folder Name="/Day-10-ExtenAndRegEx/">
     <Project Path="Day-10-ExtenAndRegEx/CollectionGeneric/CollectionGeneric.csproj" />
+    <Project Path="Day-10-ExtenAndRegEx/Extensions/Extensions.csproj" />
+    <Project Path="Day-10-ExtenAndRegEx/Garbage/Garbage.csproj" />
   </Folder>
-  <Folder Name="/Day-11-Serialization/">
-    <Project Path="Day-11-Serialization/Serialization/Serialization.csproj" />
+  <Folder Name="/Day-11-Serialization-Delegates/">
+    <Project Path="Day-11-Serialization-Delegates/Serialization/Serialization.csproj" />
   </Folder>
   <Folder Name="/Day-12-Reflection/">
     <Project Path="Day-12-Reflection/Example/Example.csproj" />
@@ -31,15 +53,12 @@
   </Folder>
   <Folder Name="/Day-15-Generic-And-Threads/">
     <Project Path="Day-15-Generic-And-Threads/GenericMethodAndDelegateTypes/GenericMethod.csproj" />
-  </Folder>
-  <Folder Name="/Day-15-Generic-And-Threads/Threads/">
-    <Project Path="Day-15-Generic-And-Threads/Threads/threads.csproj" />
+    <Project Path="Day-15-Generic-And-Threads/Threads/Threads.csproj" />
   </Folder>
   <Folder Name="/Day-16-PracticeQuestions/">
     <Project Path="Day-16-PracticeQuestions/Questions/Questions.csproj" />
   </Folder>
-  <Folder Name="/Day-17-MoreQuestions/" />
-  <Folder Name="/Day-17-MoreQuestions/Questions/">
+  <Folder Name="/Day-17-MoreQuestions/">
     <Project Path="Day-17-MoreQuestions/Questions/Ques.csproj" />
   </Folder>
   <Folder Name="/Day-18-Attributes/">

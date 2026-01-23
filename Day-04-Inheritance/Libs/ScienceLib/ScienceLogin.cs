@@ -1,5 +1,3 @@
-using CommonLib;
-
 public class ScienceLogin : LoginAbs
 {
     public override void Login(string UserName, string Password)
@@ -12,4 +10,10 @@ public class ScienceLogin : LoginAbs
     }
 
     
+}
+
+public abstract class LoginAbs
+{
+    public abstract void Login(string UserName, string Password);
+    public abstract void Logout();
 }

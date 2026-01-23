@@ -1,54 +1,36 @@
 using System;
-public class BankingSystem
+
+public class ArmstrongNumber
 {
-    public static void Bank()
+    public static void Armstrong()
     {
-        Console.WriteLine("Welcome to Phagwara Bank!! <3");
-        int choice;
-        double balance=0;
-        do
+        Console.WriteLine("Armstrong Number Checker");
+        Console.Write("Enter a number: ");
+        int number = int.Parse(Console.ReadLine());
+        
+        int originalNumber = number;
+        int sum = 0;
+        int digitCount = number.ToString().Length;
+        
+        while (number > 0)
         {
-            Console.WriteLine("=========BANK MENU=========");
-            Console.WriteLine("1. Check Balance");
-            Console.WriteLine("2. Deposite Money");
-            Console.WriteLine("3. Withdraw Money");
-            Console.WriteLine("0. Exit");
-            Console.Write("Enter request: ");
-            choice=Convert.ToInt16(Console.ReadLine());
-            switch (choice)
+            int digit = number % 10;
+            int power = 1;
+            for (int i = 0; i < digitCount; i++)
             {
-                case 1:
-                    Console.WriteLine($"Current Account Balance: Rs {balance}");
-                    break;
-                case 2:
-                    System.Console.Write("Enter amount to be Deposited: ");
-                    double amountDeposit=Convert.ToDouble(Console.ReadLine());
-                    balance=balance+amountDeposit;
-                    System.Console.WriteLine($"Rs {amountDeposit} deposited succesfully.");
-                    System.Console.WriteLine($"Account Balance: Rs{balance}");
-                    break;
-                case 3:
-                    System.Console.Write("Enter amount in to be Withrawn: Rs ");
-                    double amountWithdraw=Convert.ToDouble(Console.ReadLine());
-                    if (amountWithdraw > balance)
-                    {
-                        System.Console.WriteLine("Insufficient Balance.");
-                    }
-                    else
-                    {
-                        System.Console.WriteLine("Withdrawl Succesfull");
-                        balance=balance-amountWithdraw;
-                        System.Console.WriteLine($"Account Balance: Rs{balance}");
-                    }
-                    break;
-                case 0:
-                    System.Console.WriteLine("ThankYou for your service!! <3");
-                    break;
-                default:
-                    System.Console.WriteLine("Enter Valid Request.");
-                    break;
+                power *= digit;
             }
-        }while(choice!=0);
-        System.Console.WriteLine("Please visit Again.");
+            sum += power;
+            number /= 10;
+        }
+        
+        if (sum == originalNumber)
+        {
+            Console.WriteLine($"{originalNumber} is an Armstrong Number.");
+        }
+        else
+        {
+            Console.WriteLine($"{originalNumber} is NOT an Armstrong Number.");
+        }
     }
 }
