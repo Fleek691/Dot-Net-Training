@@ -64,4 +64,7 @@
   <Folder Name="/Day-18-Attributes/">
     <Project Path="Day-18-Attributes/Att/Att.csproj" />
   </Folder>
+  <Folder Name="/Day-19-PettyCash-Manager/">
+    <Project Path="Day-19-PettyCash-Manager/PettyCash/PettyCash.csproj" />
+  </Folder>
 </Solution>
