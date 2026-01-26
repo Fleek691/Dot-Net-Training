@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Ques4</StartupObject>
+    <StartupObject>Ques6</StartupObject>
   </PropertyGroup>
 
 </Project>

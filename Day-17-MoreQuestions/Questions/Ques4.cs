@@ -48,7 +48,7 @@ public class Inventory : IInventory
         List<(string,List<IProduct>)> proCat=new List<(string, List<IProduct>)>();
         foreach(var item in _products)
         {
-            string cat=item.Category;
+            string cat=item.Category!;
             bool found=false;
             for(int i = 0; i < proCat.Count; i++)
             {
@@ -72,7 +72,7 @@ public class Inventory : IInventory
         List<IProduct> categories=new List<IProduct>();
         foreach(var product in _products)
         {
-            if (product.Category.Equals(category))
+            if (product.Category!.Equals(category))
             {
                 categories.Add(product);
             }
@@ -85,7 +85,7 @@ public class Inventory : IInventory
         List<(string,int)>categoryWithCount=new List<(string, int)>();
         foreach(var item in _products)
         {
-            string cat=item.Category;
+            string cat=item.Category!;
             bool found=false;
             for(int i = 0; i < categoryWithCount.Count; i++)
             {
@@ -98,7 +98,7 @@ public class Inventory : IInventory
             }
             if (!found)
             {
-                categoryWithCount.Add((cat,1));
+                categoryWithCount.Add((cat,1)!);
             }
         }
         return categoryWithCount;
@@ -114,7 +114,7 @@ public class Inventory : IInventory
         List<IProduct> res=new List<IProduct>();
         foreach(var product in _products)
         {
-            if (product.Name.Equals(name))
+            if (product.Name!.Equals(name))
             {
                 res.Add(product);
             }
