@@ -70,4 +70,8 @@
   <Folder Name="/Day-20-PracticeQuestions/">
     <Project Path="Day-20-PracticeQuestions/Run.csproj" />
   </Folder>
+  <Folder Name="/Day-21-Unit-Testing/">
+    <Project Path="Day-21-Unit-Testing/EmployeeApp.Core/EmployeeApp.Core.csproj" />
+    <Project Path="Day-21-Unit-Testing/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
+  </Folder>
 </Solution>
