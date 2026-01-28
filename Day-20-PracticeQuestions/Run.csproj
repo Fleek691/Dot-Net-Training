@@ -6,6 +6,8 @@
     <RootNamespace>Day_20_PracticeQuestions</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartupObject>UserInterface</StartupObject>
   </PropertyGroup>
+  
 
 </Project>
