@@ -4,8 +4,8 @@ using System.Linq;
 
 public class Car
 {
-    public string Brand { get; set; }
-    public string Model { get; set; }
+    public string? Brand { get; set; }
+    public string? Model { get; set; }
     public int Price { get; set; }
 }
 
@@ -40,8 +40,8 @@ public class CarManagement
     public static Dictionary<string, Car> MostExpensiveModelForEachBrand(List<Car> cars)
     {
         // write your LINQ here
-        var MostExpModel=cars.GroupBy(c=>c.Brand).ToDictionary(g=>g.Key,g=>g.OrderByDescending(x=>x.Price).First());
-        return MostExpModel;
+        var MostExpModel=cars.GroupBy(c=>c.Brand!).ToDictionary(g=>g.Key,g=>g.OrderByDescending(x=>x.Price).First());
+        return MostExpModel!;
     }
 }
 

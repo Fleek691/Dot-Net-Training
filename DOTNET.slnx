@@ -67,4 +67,7 @@
   <Folder Name="/Day-19-PettyCash-Manager/">
     <Project Path="Day-19-PettyCash-Manager/PettyCash/PettyCash.csproj" />
   </Folder>
+  <Folder Name="/Day-20-PracticeQuestions/">
+    <Project Path="Day-20-PracticeQuestions/Run.csproj" />
+  </Folder>
 </Solution>

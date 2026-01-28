@@ -61,8 +61,8 @@ class Ques12
 {
     static void Main()
     {
-        int type = int.Parse(Console.ReadLine());   // 0,1,2
-        int mileage = int.Parse(Console.ReadLine());
+        int type = int.Parse(Console.ReadLine()!);   // 0,1,2
+        int mileage = int.Parse(Console.ReadLine()!);
 
         Cars car;
 
