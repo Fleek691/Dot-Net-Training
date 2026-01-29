@@ -1,26 +1,34 @@
-public class ExceptionClass
+namespace NUnitDemo.Core;
+
+public class BankAccount
 {
-    public int ExceptionMethod(int i)
+    public decimal Balance { get; private set; }
+
+    public BankAccount(decimal initialBalance)
     {
-        if (i == 1)
-        {
-            throw new DivideByZeroException("Divided by zero");
-        }
-        else if (i == 2)
-        {
-            throw new NullReferenceException("Null reference");
-        }
-        else if (i == 3)
-        {
-            throw new InvalidCastException("invalid cast");
-        }
-        else if(i==4)
-        {
-            throw new StackOverflowException("Stack overflow");
-        }
-        else
-        {
-            return 100;
-        }
+        if (initialBalance < 0)
+            throw new ArgumentOutOfRangeException(nameof(initialBalance),
+                "Initial balance cannot be negative");
+
+        Balance = initialBalance;
+    }
+
+    public void Deposit(decimal amount)
+    {
+        if (amount <= 0)
+            throw new ArgumentException("Deposit amount must be greater than zero");
+
+        Balance += amount;
+    }
+
+    public void Withdraw(decimal amount)
+    {
+        if (amount <= 0)
+            throw new ArgumentException("Withdraw amount must be greater than zero");
+
+        if (amount > Balance)
+            throw new InvalidOperationException("Insufficient balance");
+
+        Balance -= amount;
     }
 }

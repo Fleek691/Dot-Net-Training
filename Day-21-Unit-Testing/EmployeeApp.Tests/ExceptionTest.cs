@@ -1,23 +1,73 @@
 ﻿using NUnit.Framework;
-public class ExceptionTests
+using NUnitDemo.Core;
+
+namespace NUnitDemo.Tests;
+
+[TestFixture]
+public class BankAccountTests
 {
-    ExceptionClass ex;
+    private BankAccount _account;
+
     [SetUp]
     public void Setup()
     {
-        ex=new ExceptionClass();
+        _account = new BankAccount(1000);
+    }
+
+    // 1️⃣ Constructor Exception
+    [Test]
+    public void Constructor_NegativeBalance_ThrowsException()
+    {
+        Assert.Throws<ArgumentOutOfRangeException>(() =>
+        {
+            new BankAccount(-500);
+        });
+    }
+
+    // 2️⃣ Deposit Exceptions
+    [Test]
+    public void Deposit_ZeroAmount_ThrowsException()
+    {
+        Assert.Throws<ArgumentException>(() =>
+        {
+            _account.Deposit(0);
+        });
     }
 
     [Test]
-    public void Calculate_ShouldThrowDifferentExceptions()
+    public void Deposit_NegativeAmount_ThrowsException()
     {
-        Assert.Multiple(() =>
+        Assert.Throws<ArgumentException>(() =>
         {
-            Assert.Throws<DivideByZeroException>(() => ex.ExceptionMethod(1));
-            Assert.Throws<NullReferenceException>(() => ex.ExceptionMethod(2));
-            Assert.Throws<InvalidCastException>(() => ex.ExceptionMethod(3));
-            Assert.Throws<StackOverflowException>(() => ex.ExceptionMethod(4));
+            _account.Deposit(-100);
         });
     }
-}
 
+    // 3️⃣ Withdraw Exceptions
+    [Test]
+    public void Withdraw_ZeroAmount_ThrowsException()
+    {
+        Assert.Throws<ArgumentException>(() =>
+        {
+            _account.Withdraw(0);
+        });
+    }
+
+    [Test]
+    public void Withdraw_AmountGreaterThanBalance_ThrowsException()
+    {
+        Assert.Throws<InvalidOperationException>(() =>
+        {
+            _account.Withdraw(2000);
+        });
+    }
+
+    // 4️⃣ Happy Path (No Exception)
+    [Test]
+    public void Withdraw_ValidAmount_UpdatesBalance()
+    {
+        _account.Withdraw(200);
+
+        Assert.That(_account.Balance, Is.EqualTo(800));
+    }
+}
