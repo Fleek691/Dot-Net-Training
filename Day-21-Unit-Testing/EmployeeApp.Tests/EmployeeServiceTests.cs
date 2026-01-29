@@ -8,7 +8,7 @@ public class EmployeeServiceTests
     [Test]
     public void GetEmployeeCount_ReturnsCorrectCount()
     {
-        // Arrange
+        // Assign
         var mockRepo = new Mock<IEmployeeRepository>();
         mockRepo.Setup(r => r.GetAll()).Returns(new List<Employee>
         {
