@@ -273,9 +273,8 @@ To contribute to this project:
 This project is open source and available under the MIT License.
 
 ## 👤 Author
-
-**Avishek Reddy Patlolla**  
-GitHub: [@varshith3555](https://github.com/varshith3555)
+  
+GitHub: [@Fleek691](https://github.com/Fleek691)
 
 ## 📞 Support
 
