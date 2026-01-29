@@ -2,6 +2,7 @@ using NUnit.Framework;
 using EmployeeApp.Core;
 using System;
 
+
 [TestFixture]
 public class CalculatorTests
 {
