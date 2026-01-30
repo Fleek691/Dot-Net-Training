@@ -74,4 +74,8 @@
     <Project Path="Day-21-Unit-Testing/EmployeeApp.Core/EmployeeApp.Core.csproj" />
     <Project Path="Day-21-Unit-Testing/EmployeeApp.Tests/EmployeeApp.Tests.csproj" />
   </Folder>
+  <Folder Name="/Day-22-TopicwisePrac/" />
+  <Folder Name="/Day-22-TopicwisePrac/GenericPrac/">
+    <Project Path="Day-22-TopicwisePrac/GenericPrac/P.csproj" />
+  </Folder>
 </Solution>
