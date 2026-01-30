@@ -1,7 +1,7 @@
 public class Bike
 {
-    public string Model{get;set;}   
-    public string Brand{get;set;}
+    public string? Model{get;set;}   
+    public string? Brand{get;set;}
     public int PricePerDay{get;set;}
 }
 public class BikeUtility
@@ -25,11 +25,11 @@ public class BikeUtility
 
         foreach (var item in Program.bikeDetails.Values)
         {
-            if (!grp.ContainsKey(item.Brand))
+            if (!grp.ContainsKey(item.Brand!))
             {
-                grp[item.Brand] = new List<Bike>();
+                grp[item.Brand!] = new List<Bike>();
             }
-            grp[item.Brand].Add(item);
+            grp[item.Brand!].Add(item);
         }
 
         return grp;
@@ -54,19 +54,19 @@ public class Program
             Console.WriteLine();
             Console.WriteLine("Enter your choice");
 
-            choice = int.Parse(Console.ReadLine());
+            choice = int.Parse(Console.ReadLine()!);
 
             switch (choice)
             {
                 case 1:
                     Console.WriteLine("Enter the model");
-                    string model = Console.ReadLine();
+                    string model = Console.ReadLine()!;
 
                     Console.WriteLine("Enter the brand");
-                    string brand = Console.ReadLine();
+                    string brand = Console.ReadLine()!;
 
                     Console.WriteLine("Enter the price per day");
-                    int price = int.Parse(Console.ReadLine());
+                    int price = int.Parse(Console.ReadLine()!);
 
                     bu.AddBikeDetails(model, brand, price);
                     Console.WriteLine("Bike details added successfully");
