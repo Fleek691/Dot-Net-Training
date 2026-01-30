@@ -1,6 +1,6 @@
 public abstract class EmployeeRecord{
-    public string EmpName{get;set;}
-    public double[] WeeklyHours{get;set;}
+    public string? EmpName{get;set;}
+    public double[] ?WeeklyHours{get;set;}
     public abstract double GetMonthlyPay();
 
 }
@@ -11,7 +11,7 @@ public class FullTimeEmployee : EmployeeRecord
 
     public override double GetMonthlyPay()
     {
-        return (WeeklyHours.Sum()*HourlyRate)+MonthlyBonus;
+        return (WeeklyHours!.Sum()*HourlyRate)+MonthlyBonus;
     }
 }
 
@@ -20,6 +20,6 @@ public class HalfTimeEmployee: EmployeeRecord
     public double HourlyRate{get;set;}
     public override double GetMonthlyPay()
     {
-        return HourlyRate*WeeklyHours.Sum();
+        return HourlyRate*WeeklyHours!.Sum();
     }
 }
