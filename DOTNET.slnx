@@ -78,4 +78,7 @@
   <Folder Name="/Day-22-TopicwisePrac/GenericPrac/">
     <Project Path="Day-22-TopicwisePrac/GenericPrac/P.csproj" />
   </Folder>
+  <Folder Name="/Day-23-TopBrainAssesment/">
+    <Project Path="Day-23-TopBrainAssesment/Assesment.csproj" />
+  </Folder>
 </Solution>
