@@ -1,4 +1,4 @@
-public class Program
+public class Program1
 {
     private decimal balance;
 
@@ -8,7 +8,7 @@ public class Program
         private set { balance = value; }
     }
 
-    public Program(decimal initialBalance)
+    public Program1(decimal initialBalance)
     {
         if (initialBalance < 0)
             throw new InvalidOperationException("Initial balance cannot be negative.");
