@@ -9,5 +9,14 @@ namespace HospitalPatientManagement
         public int DoctorId { get; set; }
         public DateTime AppointmentTime { get; set; }
         public string Status { get; set; } // Scheduled/Completed/Cancelled
+        public Appointment(int id,int pId,int dId,DateTime time)
+        {
+            AppointmentId=id;
+            PatientId=pId;
+            DoctorId=dId;
+            AppointmentTime=time;
+            Status="Scheduled";
+        }
     }
 }
+
