@@ -1,0 +1,40 @@
+Question 8: Gym Membership Management
+Scenario: A fitness center needs to manage memberships and class schedules.
+Requirements:
+csharp
+// In class Member:
+// - int MemberId
+// - string Name
+// - string MembershipType (Basic/Premium/Platinum)
+// - DateTime JoinDate
+// - DateTime ExpiryDate
+
+// In class FitnessClass:
+// - string ClassName
+// - string Instructor
+// - DateTime Schedule
+// - int MaxParticipants
+// - List<string> RegisteredMembers
+
+// In class GymManager:
+public void AddMember(string name, string membershipType, int months)
+// Creates membership with expiry date
+
+public void AddClass(string className, string instructor, 
+                    DateTime schedule, int maxParticipants)
+
+public bool RegisterForClass(int memberId, string className)
+// Registers member if class has space
+
+public Dictionary<string, List<Member>> GroupMembersByMembershipType()
+// Groups members by their plan
+
+public List<FitnessClass> GetUpcomingClasses()
+// Returns classes scheduled for next 7 days
+Use Cases:
+•	Manage different membership tiers
+•	Schedule fitness classes
+•	Register members for classes
+•	Check membership expiry
+•	View class occupancy
+________________________________________

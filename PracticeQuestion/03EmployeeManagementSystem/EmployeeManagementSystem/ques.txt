@@ -1,0 +1,29 @@
+Question 3: Employee Management System
+Scenario: A company needs to manage employees and organize them by department.
+Requirements:
+csharp
+// In class Employee:
+// - int EmployeeId
+// - string Name
+// - string Department
+// - double Salary
+// - DateTime JoiningDate
+
+// In class HRManager:
+public void AddEmployee(string name, string dept, double salary)
+// Auto-generate EmployeeId (E001, E002...)
+
+public SortedDictionary<string, List<Employee>> GroupEmployeesByDepartment()
+// Groups employees by department
+
+public double CalculateDepartmentSalary(string department)
+// Returns total salary of a department
+
+public List<Employee> GetEmployeesJoinedAfter(DateTime date)
+// Returns employees joined after specific date
+Sample Use Cases:
+1.	Add employees to HR/IT/Sales departments
+2.	Display department-wise employee lists
+3.	Calculate total salary expenditure per department
+4.	Find employees who joined recently
+________________________________________

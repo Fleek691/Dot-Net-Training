@@ -1,0 +1,28 @@
+Question 4: Restaurant Menu Management
+Scenario: A restaurant needs to manage menu items and categorize them by course.
+Requirements:
+csharp
+// In class MenuItem:
+// - string ItemName
+// - string Category (Appetizer/Main Course/Dessert)
+// - double Price
+// - bool IsVegetarian
+
+// In class MenuManager:
+public void AddMenuItem(string name, string category, double price, bool isVeg)
+// Adds item with validation for price > 0
+
+public Dictionary<string, List<MenuItem>> GroupItemsByCategory()
+// Groups items by category
+
+public List<MenuItem> GetVegetarianItems()
+// Returns all vegetarian items
+
+public double CalculateAveragePriceByCategory(string category)
+// Returns average price of items in category
+Sample Use Cases:
+1.	Add appetizers, main courses, desserts
+2.	Display menu categorized by course type
+3.	Show vegetarian-only menu
+4.	Calculate average prices per category
+________________________________________

@@ -1,0 +1,33 @@
+Question 5: E-commerce Product Catalog
+Scenario: An e-commerce store needs to manage products and categorize them for customers.
+Requirements:
+csharp
+// In class Product:
+// - string ProductCode
+// - string ProductName
+// - string Category (Electronics/Clothing/Books)
+// - double Price
+// - int StockQuantity
+
+// In class InventoryManager:
+public void AddProduct(string name, string category, double price, int stock)
+// Auto-generate ProductCode (P001, P002...)
+
+public SortedDictionary<string, List<Product>> GroupProductsByCategory()
+// Groups products by category
+
+public bool UpdateStock(string productCode, int quantity)
+// Updates stock, returns false if insufficient stock
+
+public List<Product> GetProductsBelowPrice(double maxPrice)
+// Returns products below specified price
+
+public Dictionary<string, int> GetCategoryStockSummary()
+// Returns total stock quantity per category
+Sample Use Cases:
+1.	Add products to different categories
+2.	Display products grouped by category
+3.	Update stock after sales
+4.	Find products under budget
+5.	Show inventory summary
+________________________________________
