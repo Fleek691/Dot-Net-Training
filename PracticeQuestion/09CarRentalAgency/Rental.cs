@@ -10,9 +10,13 @@ namespace CarRentalAgency
         public DateTime StartDate { get; set; }
         public DateTime EndDate { get; set; }
         public double TotalCost { get; set; }
-        public Rental(int id,string license,string name,DateTime start,DateTime end,double total)
+        public Rental(int id,string license,string name,DateTime start,int days)
         {
-            
+            RentalId=id;
+            LicensePlate=license;
+            CustomerName=name;
+            StartDate=start;
+            EndDate=StartDate.AddDays(days);
         }
     }
 }
