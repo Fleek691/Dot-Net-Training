@@ -55,12 +55,14 @@
     <Project Path="Day-15-Generic-And-Threads/GenericMethodAndDelegateTypes/GenericMethod.csproj" />
     <Project Path="Day-15-Generic-And-Threads/Threads/Threads.csproj" />
   </Folder>
+  <Folder Name="/Day-15-Generic-And-Threads/GenericMethodAndDelegateTypes/" />
   <Folder Name="/Day-16-PracticeQuestions/">
     <Project Path="Day-16-PracticeQuestions/Questions/Questions.csproj" />
   </Folder>
   <Folder Name="/Day-17-MoreQuestions/">
     <Project Path="Day-17-MoreQuestions/Questions/Ques.csproj" />
   </Folder>
+  <Folder Name="/Day-17-MoreQuestions/Questions/" />
   <Folder Name="/Day-18-Attributes/">
     <Project Path="Day-18-Attributes/Att/Att.csproj" />
   </Folder>
@@ -80,5 +82,79 @@
   </Folder>
   <Folder Name="/Day-23-TopBrainAssesment/">
     <Project Path="Day-23-TopBrainAssesment/Assesment.csproj" />
+  </Folder>
+  <Folder Name="/Day-24-ExceptionHandlingQues/">
+    <Project Path="Day-24-ExceptionHandlingQues/Ques.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/">
+    <Project Path="PracticeQuestion/M1/M1.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/01LibraryManagementSystem/">
+    <Project Path="PracticeQuestion/01LibraryManagementSystem/LMS.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/02HotelRoomBookingSystem/" />
+  <Folder Name="/PracticeQuestion/02HotelRoomBookingSystem/HotelRoomBooking/">
+    <Project Path="PracticeQuestion/02HotelRoomBookingSystem/HotelRoomBooking/HRM.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/03EmployeeManagementSystem/" />
+  <Folder Name="/PracticeQuestion/03EmployeeManagementSystem/EmployeeManagementSystem/">
+    <Project Path="PracticeQuestion/03EmployeeManagementSystem/EmployeeManagementSystem/EMS.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/04RestaurantMenuManagement/" />
+  <Folder Name="/PracticeQuestion/04RestaurantMenuManagement/RestaurantMenuManagement/">
+    <Project Path="PracticeQuestion/04RestaurantMenuManagement/RestaurantMenuManagement/RMM.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/05ECommerceProductCatalog/" />
+  <Folder Name="/PracticeQuestion/05ECommerceProductCatalog/ECommerceProductCatalog/">
+    <Project Path="PracticeQuestion/05ECommerceProductCatalog/ECommerceProductCatalog/EPC.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/06StudentGradeManagement/" />
+  <Folder Name="/PracticeQuestion/06StudentGradeManagement/StudentGradeManagement/">
+    <Project Path="PracticeQuestion/06StudentGradeManagement/StudentGradeManagement/SGM.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/07MovieTheatreBooking/">
+    <Project Path="PracticeQuestion/07MovieTheatreBooking/MovieTheatreBooking.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/08GymMembershipManagement/">
+    <Project Path="PracticeQuestion/08GymMembershipManagement/GymMembershipManagement.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/09CarRentalAgency/">
+    <Project Path="PracticeQuestion/09CarRentalAgency/CarRentalAgency.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/10HospitalPatientManagement/">
+    <Project Path="PracticeQuestion/10HospitalPatientManagement/HospitalPatientManagement.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/11OnlineFoodDelivery/">
+    <Project Path="PracticeQuestion/11OnlineFoodDelivery/OnlineFoodDelivery.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/12MusicStreamingService/">
+    <Project Path="PracticeQuestion/12MusicStreamingService/MusicStreamingService.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/13BankAccountManagement/">
+    <Project Path="PracticeQuestion/13BankAccountManagement/BankAccountManagement.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/14FlightBookingSystem/">
+    <Project Path="PracticeQuestion/14FlightBookingSystem/FlightBookingSystem.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/15TaskManagementSystem/">
+    <Project Path="PracticeQuestion/15TaskManagementSystem/TaskManagementSystem.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/16ELearningPlatform/">
+    <Project Path="PracticeQuestion/16ELearningPlatform/ELearningPlatform.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/17InventoryStockManagement/">
+    <Project Path="PracticeQuestion/17InventoryStockManagement/InventoryStockManagement.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/18EventManagementSystem/">
+    <Project Path="PracticeQuestion/18EventManagementSystem/EventManagementSystem.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/19CourierDeliveryTracking/">
+    <Project Path="PracticeQuestion/19CourierDeliveryTracking/CourierDeliveryTracking.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/20RealEstatePropertyManagement/">
+    <Project Path="PracticeQuestion/20RealEstatePropertyManagement/RealEstatePropertyManagement.csproj" />
+  </Folder>
+  <Folder Name="/PracticeQuestion/21SocialMediaPostManagement/">
+    <Project Path="PracticeQuestion/21SocialMediaPostManagement/SocialMediaPostManagement.csproj" />
   </Folder>
 </Solution>

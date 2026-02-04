@@ -15,12 +15,14 @@ A comprehensive C# and .NET training project covering fundamental concepts throu
 
 This project is a complete C# learning journey from basics to advanced topics. It includes practical examples, assignments, and unit tests demonstrating real-world coding practices.
 
-**Latest Addition:** Unit Testing with NUnit and Moq frameworks
+**Latest Additions:** Topicwise practice, TopBrain assessment, exception handling questions, and PracticeQuestion projects
 
 ## 📁 Project Structure
 
 ```
 Dot-Net-Training/
+├── DOTNET.slnx               # Solution file
+├── Notes.txt                 # Training notes
 ├── Day-01-Basics/              # Basic C# concepts
 ├── Day-02-Control/             # Control flow (loops, conditions)
 │   ├── Assignments/            # If-else, switch assignments
@@ -46,6 +48,10 @@ Dot-Net-Training/
 ├── Day-21-Unit-Testing/        # Unit Testing Framework
 │   ├── EmployeeApp.Core/       # Core business logic
 │   ├── EmployeeApp.Tests/      # Unit tests
+├── Day-22-TopicwisePrac/        # Topicwise practice
+├── Day-23-TopBrainAssesment/    # Assessment tasks and NUnit cases
+├── Day-24-ExceptionHandlingQues/# Exception handling questions
+├── PracticeQuestion/            # Mini-project practice set
 └── Apps/                       # Standalone demo applications
 ```
 
@@ -285,6 +291,6 @@ For questions or issues:
 
 ---
 
-**Last Updated:** January 2026  
+**Last Updated:** February 2026  
 **Project Status:** Active Development  
 **Latest Focus:** Unit Testing with NUnit and Moq
