@@ -11,5 +11,13 @@ namespace OnlineFoodDelivery
         public DateTime OrderTime { get; set; }
         public string Status { get; set; }
         public double TotalAmount { get; set; }
+        public Order(int id,int customerId,List<FoodItem>items,DateTime time)
+        {
+            OrderId=id;
+            CustomerId=customerId;
+            Items=items;
+            OrderTime=time;
+            Status="Pending";
+        }
     }
 }
