@@ -14,7 +14,6 @@ namespace MusicStreamingService
         private int songId = 1;
         private int userId = 1;
 
-        // -------------------- ADD SONG --------------------
         public void AddSong(string title, string artist, string genre, string album, TimeSpan duration)
         {
             string id = songId.ToString();
@@ -30,7 +29,6 @@ namespace MusicStreamingService
             songId++;
         }
 
-        // -------------------- CREATE PLAYLIST --------------------
         public void CreatePlaylist(string userId, string playlistName)
         {
             if (!users.ContainsKey(userId))
@@ -48,13 +46,13 @@ namespace MusicStreamingService
             string id = playlistId.ToString();
             Playlist newPlaylist = new Playlist(id, playlistName, userId);
 
-            playlists.Add(id, newPlaylist);                 // global storage
-            users[userId].UserPlaylists.Add(newPlaylist);   // ownership link
+            playlists.Add(id, newPlaylist);                 
+            users[userId].UserPlaylists.Add(newPlaylist);   
 
             playlistId++;
         }
 
-        // -------------------- ADD SONG TO PLAYLIST --------------------
+        
         public bool AddSongToPlaylist(string playlistId, string songId)
         {
             if (!playlists.ContainsKey(playlistId))
@@ -70,7 +68,7 @@ namespace MusicStreamingService
             return true;
         }
 
-        // -------------------- GROUP SONGS BY GENRE --------------------
+        
         public Dictionary<string, List<Song>> GroupSongsByGenre()
         {
             return songs.Values
@@ -78,7 +76,7 @@ namespace MusicStreamingService
                         .ToDictionary(g => g.Key, g => g.ToList());
         }
 
-        // -------------------- GET TOP PLAYED SONGS --------------------
+        
         public List<Song> GetTopPlayedSongs(int count)
         {
             return songs.Values
