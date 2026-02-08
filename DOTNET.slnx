@@ -88,6 +88,7 @@
   </Folder>
   <Folder Name="/Day-25-MoreQuestions/">
     <Project Path="Day-25-MoreQuestions/GymStream/GymStream.csproj" />
+    <Project Path="Day-25-MoreQuestions/Logistics/Logistics.csproj" />
   </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
