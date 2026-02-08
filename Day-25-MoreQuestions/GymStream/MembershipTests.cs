@@ -29,4 +29,14 @@ public class Membershiptest
         mem.DurationInMonths=-2;
         Assert.Throws<Exception>(()=>mem.ValidateEnrollment());
     }
+    [Test]
+    [TestCase("Basic", 10, 100, 980)]
+    [TestCase("Premium",10,100,930)]
+    public void CalculateTotalBill(string tier,int mont,double price,double expected){
+        mem.Tier=tier;
+        mem.DurationInMonths=mont;
+        mem.BasePricePerMonth=price;
+        double actual=mem.CalculateBill();
+        Assert.That(expected,Is.EqualTo(actual));
+    }
 }
