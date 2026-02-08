@@ -86,6 +86,9 @@
   <Folder Name="/Day-24-ExceptionHandlingQues/">
     <Project Path="Day-24-ExceptionHandlingQues/Ques.csproj" />
   </Folder>
+  <Folder Name="/Day-25-MoreQuestions/">
+    <Project Path="Day-25-MoreQuestions/GymStream/GymStream.csproj" />
+  </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
   </Folder>
