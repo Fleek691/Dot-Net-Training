@@ -52,3 +52,5 @@ Unit Test Projects are always seperate from Production Projects
 interface with get name and id
 implement that interface in a class;
 TDD-Test Driven Development
+
+ dotnet sln dotnet.slnx add Day-26-M1QuesPrac
