@@ -1,41 +1,64 @@
-﻿// using System;
-// using System.Threading.Tasks;
-
-// class Program
-// {
-//     static async Task Main()
-//     {
-//         await SaveAsync();                // Task (no return)
-//         int total = await GetTotalAsync(); // Task<int> (returns value)
-//         Console.WriteLine(total);
-//     }
-
-//     static async Task SaveAsync()
-//     {
-//         await Task.Delay(3000); // pretend we saved to DB
-//         Console.WriteLine("Saved!");
-//     }
-
-//     static async Task<int> GetTotalAsync()
-//     {
-//         await Task.Delay(3000); // pretend we calculated
-//         return 42;
-//     }
-// }
-
+using System;
 using System.Threading.Tasks;
 
-public class GreetingService
-{
-    static async Task Main()
-    {
-        var a=await GetGreetingAsync("Avishek");
-        System.Console.WriteLine(a);
-    }
+namespace ConsoleAsyncAwaitStepByStep;
 
-    public static async Task<string> GetGreetingAsync(string name)
+public class Program
+{
+    public static async Task Main()
     {
-        await Task.Delay(5000); // pretend network delay
-        return $"Hello, {name}!";
+        Console.Title = "C# Async/Await - Step-by-step Console Samples";
+
+        while (true)
+        {
+            Console.Clear();
+            Console.WriteLine("C# Async/Await - Step-by-step Console Samples");
+            Console.WriteLine("===========================================");
+            Console.WriteLine("Pick a sample to run:");
+            Console.WriteLine("  1) await Task.Delay (basic async wait)");
+            Console.WriteLine("  2) Task<T> return value");
+            Console.WriteLine("  3) Async method chain (A awaits B)");
+            Console.WriteLine("  4) Task.WhenAll (run tasks together)");
+            Console.WriteLine("  5) Exception handling with await");
+            Console.WriteLine("  6) CancellationToken (cancel async work)");
+            Console.WriteLine("  0) Exit");
+            Console.WriteLine();
+            Console.Write("Enter choice: ");
+
+            string? choice = Console.ReadLine();
+
+            Console.WriteLine();
+            switch (choice)
+            {
+                case "1":
+                    await Sample01_AwaitDelay.RunAsync();
+                    break;
+                case "2":
+                    await Sample02_TaskOfT.RunAsync();
+                    break;
+                case "3":
+                    await Sample03_MethodChain.RunAsync();
+                    break;
+                case "4":
+                    await Sample04_WhenAll.RunAsync();
+                    break;
+                case "5":
+                    await Sample05_Exceptions.RunAsync();
+                    break;
+                case "6":
+                    await Sample06_Cancellation.RunAsync();
+                    break;
+                case "0":
+                    return;
+                default:
+                    Console.WriteLine("Invalid choice. Press Enter to try again...");
+                    Console.ReadLine();
+                    continue;
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("Press Enter to return to menu...");
+            Console.ReadLine();
+        }
     }
 }

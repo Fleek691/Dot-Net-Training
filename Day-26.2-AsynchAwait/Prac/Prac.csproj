@@ -5,7 +5,7 @@
     <TargetFramework>net10.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartUpObject>Program2</StartUpObject>
+    <StartUpObject>ConsoleAsyncAwaitStepByStep.Program</StartUpObject>
   </PropertyGroup>
 
 </Project>
