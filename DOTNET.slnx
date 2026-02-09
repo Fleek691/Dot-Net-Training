@@ -91,16 +91,17 @@
     <Project Path="Day-25-MoreQuestions/LMS/LMS.csproj" />
     <Project Path="Day-25-MoreQuestions/Logistics/Logistics.csproj" />
   </Folder>
-  <Folder Name="/Day-26-M1QuesPrac/">
-    <Project Path="Day-26-M1QuesPrac/Banking/Banking.csproj" />
-    <Project Path="Day-26-M1QuesPrac/CabFare/CabFare.csproj" />
-    <Project Path="Day-26-M1QuesPrac/EmployeeOnboarding/EmployeeOnboarding.csproj" />
-  </Folder>
-  <Folder Name="/Day-26-M1QuesPrac/ECommerceDiscount/">
-    <Project Path="Day-26-M1QuesPrac/ECommerceDiscount/ECOmmerceDiscount.csproj" />
-  </Folder>
+  
   <Folder Name="/Day-26.1-M1QuesPrac/">
+    <Project Path="Day-26.1-M1QuesPrac/Banking/Banking.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/CabFare/CabFare.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/ECOmmerceDiscount/ECOmmerceDiscount.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/EmployeeOnboarding/EmployeeOnboarding.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/LibraryComposite/LibraryComposite.csproj" />
     <Project Path="Day-26.1-M1QuesPrac/Notification/Notification.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/StaticCountObjectCount/StaticCountObjectCount.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/StringQues/StringQues.csproj" />
+    <Project Path="Day-26.1-M1QuesPrac/StudentResult/StudentResult.csproj" />
   </Folder>
   <Folder Name="/Day-26.2-AsynchAwait/">
     <Project Path="Day-26.2-AsynchAwait/Prac/Prac.csproj" />
