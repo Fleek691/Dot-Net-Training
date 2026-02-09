@@ -96,6 +96,9 @@
     <Project Path="Day-26-M1QuesPrac/CabFare/CabFare.csproj" />
     <Project Path="Day-26-M1QuesPrac/EmployeeOnboarding/EmployeeOnboarding.csproj" />
   </Folder>
+  <Folder Name="/Day-26-M1QuesPrac/ECommerceDiscount/">
+    <Project Path="Day-26-M1QuesPrac/ECommerceDiscount/ECOmmerceDiscount.csproj" />
+  </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
   </Folder>
