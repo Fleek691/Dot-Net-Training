@@ -99,6 +99,9 @@
   <Folder Name="/Day-26-M1QuesPrac/ECommerceDiscount/">
     <Project Path="Day-26-M1QuesPrac/ECommerceDiscount/ECOmmerceDiscount.csproj" />
   </Folder>
+  <Folder Name="/Day-26.1-M1QuesPrac/">
+    <Project Path="Day-26.1-M1QuesPrac/Notification/Notification.csproj" />
+  </Folder>
   <Folder Name="/Day-26.2-AsynchAwait/">
     <Project Path="Day-26.2-AsynchAwait/Prac/Prac.csproj" />
   </Folder>
