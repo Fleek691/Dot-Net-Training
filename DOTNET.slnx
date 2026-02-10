@@ -183,4 +183,5 @@
   <Folder Name="/PracticeQuestion/21SocialMediaPostManagement/">
     <Project Path="PracticeQuestion/21SocialMediaPostManagement/SocialMediaPostManagement.csproj" />
   </Folder>
+  <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
 </Solution>
