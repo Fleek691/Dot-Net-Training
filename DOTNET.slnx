@@ -103,8 +103,14 @@
     <Project Path="Day-26.1-M1QuesPrac/StringQues/StringQues.csproj" />
     <Project Path="Day-26.1-M1QuesPrac/StudentResult/StudentResult.csproj" />
   </Folder>
+  <Folder Name="/Day-26.1-M1QuesPrac/PramaterTypes/">
+    <Project Path="Day-26.1-M1QuesPrac/PramaterTypes/Prac.csproj" />
+  </Folder>
   <Folder Name="/Day-26.2-AsynchAwait/">
     <Project Path="Day-26.2-AsynchAwait/Prac/Prac.csproj" />
+  </Folder>
+  <Folder Name="/Day-27-StringQues/">
+    <Project Path="Day-27-StringQues/Prac.csproj" />
   </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />

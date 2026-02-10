@@ -54,3 +54,9 @@ implement that interface in a class;
 TDD-Test Driven Development
 
  dotnet sln dotnet.slnx add Day-26-M1QuesPrac
+
+
+ written code gets converted into csharp objects 
+ clr goes to them reads the binary code and provides information
+ reflection-a way to get the info about the info the only way
+ used for automation (during runtime u can create class)
