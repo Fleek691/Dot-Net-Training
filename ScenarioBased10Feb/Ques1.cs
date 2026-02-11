@@ -144,7 +144,7 @@ public class InventoryManager
 }
 
 // Program Entry
-public class Program
+public class Program1
 {
     public static void Main()
     {
