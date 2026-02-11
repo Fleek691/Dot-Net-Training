@@ -18,8 +18,8 @@ namespace University_Course_Registration_System
         public List<string> Prerequisites { get; private set; }
 
         private int CurrentEnrollment;
-
-        public Course(string code, string name, int credits, int maxCapacity = 50, List<string> prerequisites = null)
+    
+        public Course(string code, string name, int credits, int maxCapacity = 50, List<string>? prerequisites = null)
         {
             CourseCode = code;
             CourseName = name;
@@ -32,27 +32,34 @@ namespace University_Course_Registration_System
         public bool IsFull()
         {
             // TODO: Return true if CurrentEnrollment >= MaxCapacity
-            throw new NotImplementedException();
+            return CurrentEnrollment >= MaxCapacity;
         }
 
         public bool HasPrerequisites(List<string> completedCourses)
         {
             // TODO: Check if ALL prerequisites exist in completedCourses
-            throw new NotImplementedException();
+            return Prerequisites.All(prereq => completedCourses.Contains(prereq));
         }
 
         public void EnrollStudent()
         {
             // TODO:
             // 1. Throw InvalidOperationException if course is full
+            if (CurrentEnrollment >= MaxCapacity) throw new InvalidOperationException();
+            else
+            {
+                CurrentEnrollment++;
+            }
             // 2. Otherwise increment CurrentEnrollment
-            throw new NotImplementedException();
         }
 
         public void DropStudent()
         {
             // TODO: Decrement CurrentEnrollment only if greater than zero
-            throw new NotImplementedException();
+            if (CurrentEnrollment > 0)
+            {
+                CurrentEnrollment--;
+            }
         }
 
         public string GetEnrollmentInfo()

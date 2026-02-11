@@ -19,7 +19,7 @@ namespace University_Course_Registration_System
         public List<string> CompletedCourses { get; private set; }
         public List<Course> RegisteredCourses { get; private set; }
 
-        public Student(string id, string name, string major, int maxCredits = 18, List<string> completedCourses = null)
+        public Student(string id, string name, string major, int maxCredits = 18, List<string>? completedCourses = null)
         {
             StudentId = id;
             Name = name;
@@ -32,26 +32,35 @@ namespace University_Course_Registration_System
         public int GetTotalCredits()
         {
             // TODO: Return sum of credits of all RegisteredCourses
-            throw new NotImplementedException();
+            return RegisteredCourses.Sum(e => e.Credits);
         }
 
         public bool CanAddCourse(Course course)
         {
             // TODO:
             // 1. Course should not already be registered
+            if (RegisteredCourses.Contains(course)) return false;
             // 2. Total credits + course credits <= MaxCredits
+            int total = GetTotalCredits();
+            if (total + course.Credits > MaxCredits) return false;
             // 3. Course prerequisites must be satisfied
-            throw new NotImplementedException();
+            if (!course.HasPrerequisites(CompletedCourses)) return false;
+            return true;
+
         }
 
         public bool AddCourse(Course course)
         {
             // TODO:
             // 1. Call CanAddCourse
+            if (!CanAddCourse(course)) return false;
             // 2. Check course capacity
+            if (course.IsFull()) return false;
             // 3. Add course to RegisteredCourses
+            RegisteredCourses.Add(course);
+            course.EnrollStudent();
             // 4. Call course.EnrollStudent()
-            throw new NotImplementedException();
+            return true;
         }
 
         public bool DropCourse(string courseCode)
@@ -60,7 +69,22 @@ namespace University_Course_Registration_System
             // 1. Find course by code
             // 2. Remove from RegisteredCourses
             // 3. Call course.DropStudent()
-            throw new NotImplementedException();
+            Course? courseTem = null;
+            foreach (var course in RegisteredCourses)
+            {
+                if (course.CourseCode == courseCode)
+                {
+                    courseTem = course;
+                    break;
+                }
+            }
+            if (courseTem != null)
+            {
+                RegisteredCourses.Remove(courseTem);
+                courseTem.DropStudent();
+                return true;
+            }
+            return false;
         }
 
         public void DisplaySchedule()
@@ -68,7 +92,11 @@ namespace University_Course_Registration_System
             // TODO:
             // Display course code, name, and credits
             // If no courses registered, display appropriate message
-            throw new NotImplementedException();
+            if (RegisteredCourses.Count == 0) { Console.WriteLine("No courses registered"); return; }
+            foreach (var course in RegisteredCourses)
+            {
+                System.Console.WriteLine($"{course.CourseCode} , {course.CourseName}, {course.Credits}");
+            }
         }
     }
 }
