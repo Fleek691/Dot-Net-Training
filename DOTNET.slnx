@@ -190,5 +190,8 @@
   <Folder Name="/ScenarioBased10Feb/UniverSity Course Registration System/">
     <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
   </Folder>
+  <Folder Name="/StrinPracQuestions12Feb/">
+    <Project Path="StrinPracQuestions12Feb/Prac.csproj" />
+  </Folder>
   <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
 </Solution>
