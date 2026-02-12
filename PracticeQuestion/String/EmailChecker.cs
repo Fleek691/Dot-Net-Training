@@ -4,8 +4,8 @@ public class EmailChecker
     {
         System.Console.WriteLine("Enter the gmail: ");
         string input=Console.ReadLine()!;
-        bool isLower=input!.All(char.IsLower);
-        if(!input.Contains("@") || !isLower)
+        bool isLower=input!.Where(char.IsLetter).All(char.IsLower);
+        if( !isLower)
         {
             System.Console.WriteLine("Invalid EMail");
             return;
@@ -18,16 +18,22 @@ public class EmailChecker
                 count++;
             }
         }
-        if (count > 1)
+        if (count != 1)
         {
+            Console.WriteLine("Invalid");
+            return;
         }
         string[] parts=input.Split("@");
-        string filteredEMail=string.Empty;
         foreach(char ch in parts[0])
         {
             if (char.IsLetterOrDigit(ch))
             {
-                filteredEMail+=ch;
+                continue;
+            }
+            else
+            {
+                Console.WriteLine("Invalid");
+                return;
             }
         }
         if(!parts[1].ToString().Contains(".")){Console.WriteLine("Invalid Input");
@@ -40,7 +46,7 @@ public class EmailChecker
                 dotcount++;
             }
         }
-        if (dotcount > 1)
+        if (dotcount != 1)
         {
             Console.WriteLine("Invalid Email");
             return;

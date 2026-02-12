@@ -183,6 +183,9 @@
   <Folder Name="/PracticeQuestion/21SocialMediaPostManagement/">
     <Project Path="PracticeQuestion/21SocialMediaPostManagement/SocialMediaPostManagement.csproj" />
   </Folder>
+  <Folder Name="/PracticeQuestion/String/">
+    <Project Path="PracticeQuestion/String/Ques.csproj" />
+  </Folder>
   <Folder Name="/ScenarioBased10Feb/" />
   <Folder Name="/ScenarioBased10Feb/UniverSity Course Registration System/">
     <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
