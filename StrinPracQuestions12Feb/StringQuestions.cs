@@ -6,8 +6,8 @@ public class StringQuestions
     public static void Main()
     {
         #region Universal Input
-        // Console.Write("Enter a string: ");
-        // string input = Console.ReadLine()!;
+        Console.Write("Enter a string: ");
+        string input = Console.ReadLine()!;
         #endregion
 
         #region Ques 1 ReverseString
@@ -113,54 +113,54 @@ public class StringQuestions
         #endregion
 
         #region MergeTwoSortedArray
-        // Console.WriteLine("Enter the num of elements for first Array: ");
-        // int n = int.Parse(Console.ReadLine()!);
-        // Console.WriteLine("Enter the elements: ");
-        // int[] elements = new int[n];
-        // for (int l = 0; l < n; l++)
-        // {
-        //     elements[l] = int.Parse(Console.ReadLine()!);
-        // }
-        // Console.WriteLine("Enter the num of elements for second Array: ");
-        // int n1 = int.Parse(Console.ReadLine()!);
-        // Console.WriteLine("Enter the elements: ");
-        // int[] elements1 = new int[n1];
-        // for (int l = 0; l < n1; l++)
-        // {
-        //     elements1[l] = int.Parse(Console.ReadLine()!);
-        // }
-        // elements.Sort();
-        // elements1.Sort();
-        // int[] merged=new int[n1+n];
-        // int i=0;
-        // int j=0;
-        // int k=0;
-        // while(i<elements.Length && j < elements1.Length)
-        // {
-        //     if (elements[i] < elements1[j])
-        //     {
-        //         merged[k++]=elements[i++];
-        //     }
-        //     else
-        //     {
-        //         merged[k++]=elements[j++];
-        //     }
-        // }
-        // while (i < elements.Length)
-        // {
-        //     merged[k++]=elements[i++];
-        // }
-        // while (j < elements1.Length)
-        // {
-        //     merged[k++]=elements1[j++];
-        // }
-        // Console.WriteLine("Merged Values: ");
-        // foreach(var item in merged)
-        // {
-        //     Console.Write(item);
-        // }
+        Console.WriteLine("Enter the num of elements for first Array: ");
+        int n = int.Parse(Console.ReadLine()!);
+        Console.WriteLine("Enter the elements: ");
+        int[] elements = new int[n];
+        for (int l = 0; l < n; l++)
+        {
+            elements[l] = int.Parse(Console.ReadLine()!);
+        }
+        Console.WriteLine("Enter the num of elements for second Array: ");
+        int n1 = int.Parse(Console.ReadLine()!);
+        Console.WriteLine("Enter the elements: ");
+        int[] elements1 = new int[n1];
+        for (int l = 0; l < n1; l++)
+        {
+            elements1[l] = int.Parse(Console.ReadLine()!);
+        }
+        elements.Sort();
+        elements1.Sort();
+        int[] merged = new int[n1 + n];
+        int i = 0;
+        int j = 0;
+        int k = 0;
+        while (i < elements.Length && j < elements1.Length)
+        {
+            if (elements[i] < elements1[j])
+            {
+                merged[k++] = elements[i++];
+            }
+            else
+            {
+                merged[k++] = elements[j++];
+            }
+        }
+        while (i < elements.Length)
+        {
+            merged[k++] = elements[i++];
+        }
+        while (j < elements1.Length)
+        {
+            merged[k++] = elements1[j++];
+        }
+        Console.WriteLine("Merged Values: ");
+        foreach (var item in merged)
+        {
+            Console.Write(item);
+        }
         #endregion
 
-        
+
     }
 }

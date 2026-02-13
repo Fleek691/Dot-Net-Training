@@ -30,8 +30,8 @@
     <Project Path="Day-08-FolderStruct/MainFile/MainFile.csproj" />
   </Folder>
   <Folder Name="/Day-09-Indexer-Static/">
-    <Project Path="Day-09-Indexer-Static/Indexer/Indexer.csproj" />
     <Project Path="Day-09-Indexer-Static/GenericandStatic/GenericandStatic.csproj" />
+    <Project Path="Day-09-Indexer-Static/Indexer/Indexer.csproj" />
   </Folder>
   <Folder Name="/Day-10-ExtenAndRegEx/">
     <Project Path="Day-10-ExtenAndRegEx/CollectionGeneric/CollectionGeneric.csproj" />
@@ -186,12 +186,11 @@
   <Folder Name="/PracticeQuestion/String/">
     <Project Path="PracticeQuestion/String/Ques.csproj" />
   </Folder>
-  <Folder Name="/ScenarioBased10Feb/" />
-  <Folder Name="/ScenarioBased10Feb/UniverSity Course Registration System/">
-    <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
-  </Folder>
   <Folder Name="/StrinPracQuestions12Feb/">
     <Project Path="StrinPracQuestions12Feb/Prac.csproj" />
+  </Folder>
+  <Folder Name="/UniverSity Course Registration System/">
+    <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
   </Folder>
   <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
 </Solution>
