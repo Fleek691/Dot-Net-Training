@@ -112,6 +112,9 @@
   <Folder Name="/Day-27-StringQues/">
     <Project Path="Day-27-StringQues/Prac.csproj" />
   </Folder>
+  <Folder Name="/Day-28-Ado.NetTrial/">
+    <Project Path="Day-28-Ado.NetTrial/proj.csproj" />
+  </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
   </Folder>
