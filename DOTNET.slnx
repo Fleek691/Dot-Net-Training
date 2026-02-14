@@ -195,5 +195,6 @@
   <Folder Name="/UniverSity Course Registration System/">
     <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
   </Folder>
+  <Project Path="Day-28.2-CollectionModerate/Day-28.2-CollectionModerate.csproj" />
   <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
 </Solution>
