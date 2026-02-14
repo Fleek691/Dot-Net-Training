@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="yes"?>
+
+<NewDataSet>
+  <Table>
+    <CustomerId>101</CustomerId>
+    <FullName>Gopi Suresh</FullName>
+    <City>Coimbatore</City>
+  </Table>
+  <Table>
+    <CustomerId>102</CustomerId>
+    <FullName>Anita Ravi</FullName>
+    <City>Chennai</City>
+  </Table>
+  <Table>
+    <CustomerId>103</CustomerId>
+    <FullName>Karthik Mohan</FullName>
+    <City>Bengaluru</City>
+  </Table>
+  <Table>
+    <CustomerId>104</CustomerId>
+    <FullName>Meena Kumar</FullName>
+    <City>Chennai</City>
+  </Table>
+  <Table>
+    <CustomerId>105</CustomerId>
+    <FullName>Suresh Babu</FullName>
+    <City>Hyderabad</City>
+  </Table>
+</NewDataSet>
