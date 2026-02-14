@@ -1,29 +1,99 @@
 <?xml version="1.0" standalone="yes"?>
-
 <NewDataSet>
   <Table>
     <CustomerId>101</CustomerId>
-    <FullName>Gopi Suresh</FullName>
+    <FullName>Updated Name</FullName>
     <City>Coimbatore</City>
+    <Segment>Corporate</Segment>
+    <IsActive>true</IsActive>
+    <CreatedOn>2025-11-12T00:00:00+05:30</CreatedOn>
   </Table>
   <Table>
     <CustomerId>102</CustomerId>
     <FullName>Anita Ravi</FullName>
     <City>Chennai</City>
+    <Segment>Corporate</Segment>
+    <IsActive>true</IsActive>
+    <CreatedOn>2025-10-05T00:00:00+05:30</CreatedOn>
   </Table>
   <Table>
     <CustomerId>103</CustomerId>
     <FullName>Karthik Mohan</FullName>
     <City>Bengaluru</City>
+    <Segment>Retail</Segment>
+    <IsActive>true</IsActive>
+    <CreatedOn>2025-09-15T00:00:00+05:30</CreatedOn>
   </Table>
   <Table>
     <CustomerId>104</CustomerId>
     <FullName>Meena Kumar</FullName>
     <City>Chennai</City>
+    <Segment>Retail</Segment>
+    <IsActive>false</IsActive>
+    <CreatedOn>2024-12-20T00:00:00+05:30</CreatedOn>
   </Table>
   <Table>
     <CustomerId>105</CustomerId>
     <FullName>Suresh Babu</FullName>
     <City>Hyderabad</City>
+    <Segment>Corporate</Segment>
+    <IsActive>true</IsActive>
+    <CreatedOn>2025-01-10T00:00:00+05:30</CreatedOn>
   </Table>
+  <Table>
+    <CustomerId>6337</CustomerId>
+    <FullName>John Doe</FullName>
+    <City>Bangalore</City>
+    <Segment>Retail</Segment>
+    <IsActive>true</IsActive>
+    <CreatedOn>2026-02-14T00:00:00+05:30</CreatedOn>
+  </Table>
+  <Table1>
+    <OrderId>5001</OrderId>
+    <CustomerId>101</CustomerId>
+    <OrderDate>2026-01-10T00:00:00+05:30</OrderDate>
+    <Amount>1200.00</Amount>
+    <Status>Delivered</Status>
+    <PaymentMode>UPI</PaymentMode>
+  </Table1>
+  <Table1>
+    <OrderId>5002</OrderId>
+    <CustomerId>101</CustomerId>
+    <OrderDate>2026-01-15T00:00:00+05:30</OrderDate>
+    <Amount>850.00</Amount>
+    <Status>Pending</Status>
+    <PaymentMode>Card</PaymentMode>
+  </Table1>
+  <Table1>
+    <OrderId>5003</OrderId>
+    <CustomerId>102</CustomerId>
+    <OrderDate>2026-01-05T00:00:00+05:30</OrderDate>
+    <Amount>5000.00</Amount>
+    <Status>Delivered</Status>
+    <PaymentMode>Card</PaymentMode>
+  </Table1>
+  <Table1>
+    <OrderId>5004</OrderId>
+    <CustomerId>103</CustomerId>
+    <OrderDate>2025-12-30T00:00:00+05:30</OrderDate>
+    <Amount>300.00</Amount>
+    <Status>Cancelled</Status>
+    <PaymentMode>Cash</PaymentMode>
+  </Table1>
+  <Table1>
+    <OrderId>5005</OrderId>
+    <CustomerId>105</CustomerId>
+    <OrderDate>2026-01-18T00:00:00+05:30</OrderDate>
+    <Amount>2500.00</Amount>
+    <Status>Delivered</Status>
+    <PaymentMode>UPI</PaymentMode>
+  </Table1>
+  <Table1>
+    <OrderId>5006</OrderId>
+    <CustomerId>102</CustomerId>
+    <OrderDate>2026-01-20T00:00:00+05:30</OrderDate>
+    <Amount>1500.00</Amount>
+    <Status>Pending</Status>
+    <PaymentMode>UPI</PaymentMode>
+  </Table1>
 </NewDataSet>

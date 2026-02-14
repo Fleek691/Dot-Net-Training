@@ -1,7 +1,7 @@
 ﻿using System;
 using Microsoft.Data.SqlClient;
 
-class Program
+class Program1
 {
     static void Main()
     {

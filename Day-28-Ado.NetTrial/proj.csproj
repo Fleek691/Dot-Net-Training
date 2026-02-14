@@ -6,7 +6,7 @@
     <RootNamespace>Day_28_Ado.NetTrial</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
-    <StartupObject>Program2</StartupObject>
+    <StartupObject>Program1</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
