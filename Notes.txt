@@ -61,3 +61,166 @@ TDD-Test Driven Development
  reflection-a way to get the info about the info the only way
  used for automation (during runtime u can create class)
 
+use oops for:-
+Real world entities,memory management
+
+// 1.    Get the values from the user.
+Sam has started working as a freelancer. He got a project from a jewellery shop. The project requires Sam to manage jewellery details, which store the details of each piece of jewellery, including the ID, type, and material. The application will help the company manage their inventory more efficiently, allowing them to keep track of their stock and prices accurately.
+
+Help him create an application that meets the requirements by using your C# skills.
+
+Functionalities:
+
+**In class Program:**
+- `public static Dictionary<int, Jewellery> jewelleryDetails` (this dictionary is already provided)
+
+**In class Jewellery, implement the following properties:**
+| Data Type | Property Name |
+|-----------|--------------|
+| string    | Id           |
+| string    | Type         |
+| string    | Material     |
+| int       | Price        |
+
+**In class JwelleryUtility, implement the following methods:**
+
+1. `public Dictionary<string, string> GetJewelleryDetails(string id)`
+	- Gets the jewellery details from the dictionary `jewelleryDetails` based on the id passed as an argument.
+	- If the id is available in `jewelleryDetails`, concatenate type and material using an underscore, then add the id and this value as a dictionary, and return it.
+	  - Format: `<Jewellery id, Type_Material>`
+	- If the id is not available in the dictionary, return an empty dictionary.
+
+2. `public Dictionary<string, Jewellery> UpdateJewelleryPrice(string id, int price)`
+	- Updates the price of the jewellery based on the id passed as an argument.
+	- If the id is available in `jewelleryDetails`, update the price, store the updated details in the dictionary, and return it.
+	- If the id is not available in the dictionary, return an empty dictionary.
+
+**In Program class - Main method:**
+1. Get the values from the user.
+2. Call the methods accordingly and display the result as per the Sample Output.
+	- If the `GetJewelleryDetails` method returns an empty dictionary, display "Jewellery id not found"
+	- If the `UpdateJewelleryPrice` method returns an empty dictionary, display "Jewellery id not found"
+
+**Note:**
+- Keep the methods and classes as public.
+- Please read the method rules clearly.
+- Do not use `Environment.Exit()` to terminate the program.
+- Do not change the given code template.
+
+**Summary:**
+Through working on this project, Sam has learned more about the generic collection Dictionary class in C#.
+If you need, you can try this in your code also.
+
+---
+
+**Sample Input/Output:**
+
+1. Get Jewellery Details
+2. Update Price
+3. Exit
+Enter your choice
+1
+Enter the jewellery id
+JW01
+JW01   Bracelet_Silver
+
+1. Get Jewellery Details
+2. Update Price
+3. Exit
+Enter your choice
+1
+Enter the jewellery id
+JW77
+Jewellery id not found
+
+1. Get Jewellery Details
+2. Update Price
+3. Exit
+Enter your choice
+2
+Enter the jewellery id
+JW03
+Enter the price to be updated
+10000
+Id : JW03,    Type : Necklace,    Material : Gold,    Price : 10000
+
+1. Get Jewellery Details
+2. Update Price
+3. Exit
+Enter your choice
+2
+Enter the jewellery id
+JW54
+Enter the price to be updated
+500
+Jewellery id not found
+
+1. Get Jewellery Details
+2. Update Price
+3. Exit
+Enter your choice
+3
+Thank you
+// 2.    Call the methods accordingly and display the result as per the Sample Output. 
+//        --  If the GetJewelleryDetails method returns an empty dictionary, then display "Jewellery id not found"       
+//       --  If the UpdateJewelleryPrice method returns an empty dictionary, then display "Jewellery id not found"
+// Note:
+// Keep the methods and classes as public.
+// Please read the method rules clearly.
+// Do not use Environment.Exit() to terminate the program.
+// Do not change the given code template. 
+// Summary : 
+// Through working on this project, he has learned more about the generic collection Dictionary class in C#.
+//  If you need you can try this in your code also.
+// Sample Input/Output:
+// 1. Get Jewellery Details
+// 2. Update Price
+// 3. Exit
+// Enter your choice
+// 1
+// Enter the jewellery id
+// JW01
+// JW01   Bracelet_Silver
+// 1. Get Jewellery Details
+// 2. Update Price
+// 3. Exit
+// Enter your choice
+// 1
+// Enter the jewellery id
+// JW77
+// Jewellery id not found
+// 1. Get Jewellery Details
+// 2. Update Price
+// 3. Exit
+// Enter your choice
+// 2
+// Enter the jewellery id
+// JW03
+// Enter the price to be updated
+// 10000
+// Id : JW03,    Type : Necklace,    Material : Gold,    Price : 10000
+// 1. Get Jewellery Details
+// 2. Update Price
+// 3. Exit
+
+// Enter your choice
+// 2
+// Enter the jewellery id
+ 
+// JW54
+// Enter the price to be updated
+
+// 500
+ 
+// Jewellery id not found
+
+ 
+ 
+// 1. Get Jewellery Details
+// 2. Update Price
+// 3. Exit
+
+// Enter your choice
+// 3
+// Thank you
+ 

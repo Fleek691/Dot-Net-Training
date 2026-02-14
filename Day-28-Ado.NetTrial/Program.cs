@@ -1,29 +1,140 @@
-﻿using System;
-using Microsoft.Data.SqlClient;
+﻿// // using System;
+// // using Microsoft.Data.SqlClient;
 
-class Program
+// // class Program
+// // {
+// //     static void Main()
+// //     {
+// //         string cs =
+// //         "Data Source=FLEEK\\SQLEXPRESS;Initial Catalog=Customer-Order;Integrated Security=True;Encrypt=False;";
+
+// //         string sql = "SELECT CustomerId, FullName, City FROM dbo.Customers";
+
+// //         using SqlConnection con = new SqlConnection(cs);
+// //         using SqlCommand cmd = new SqlCommand(sql, con);
+
+// //         con.Open();
+
+// //         using SqlDataReader reader = cmd.ExecuteReader();
+
+// //         while (reader.Read())
+// //         {
+// //             Console.WriteLine(
+// //                 $"{reader["CustomerId"]} | " +
+// //                 $"{reader["FullName"]} | " +
+// //                 $"{reader["City"]}"
+// //             );
+// //         }
+// //     }
+// // }
+
+public class Jewellery
 {
-    static void Main()
+    public string Type { get; set; }
+    public string Id { get; set; }
+    public string Material { get; set; }
+    public int Price { get; set; }
+    public Jewellery(string type, string id, string material, int price)
     {
-        string cs =
-        "Data Source=FLEEK\\SQLEXPRESS;Initial Catalog=Customer-Order;Integrated Security=True;Encrypt=False;";
+        Type = type;
+        Id = id;
+        Material = material;
+        Price = price;
+    }
+}
 
-        string sql = "SELECT CustomerId, FullName, City FROM dbo.Customers";
+public class Jewelleryutility
+{
 
-        using SqlConnection con = new SqlConnection(cs);
-        using SqlCommand cmd = new SqlCommand(sql, con);
+    public static Dictionary<string, string> GetJewelleryDetails(string id)
+    {
+        Dictionary<string, string> result = new Dictionary<string, string>();
+            var found = Program.jewelleryDetails.Values.FirstOrDefault(j => j.Id == id);
+            if (found == null) return result;
+            string concatenated = found.Type + "_" + found.Material;
+        result[id] = concatenated;
+        return result;
+    }
+    public Dictionary<string, Jewellery> UpdateJewelleryPrice(string id, int price)
+    {
+        Dictionary<string, Jewellery> updatePriceList = new Dictionary<string, Jewellery>();
+            var found = Program.jewelleryDetails.Values.FirstOrDefault(j => j.Id == id);
+            if (found == null) return updatePriceList;
+            found.Price = price;
+            updatePriceList[id] = found;
+        return updatePriceList;
+    }
+}
+public class Program
+{
+    public static Dictionary<int, Jewellery> jewelleryDetails = new();
 
-        con.Open();
+    public static void Main()
+    {
+        
+        jewelleryDetails.Add(1, new Jewellery("Bracelet", "JW01", "Silver", 5000));
+        jewelleryDetails.Add(2, new Jewellery("Ring", "JW02", "Platinum", 8000));
+        jewelleryDetails.Add(3, new Jewellery("Necklace", "JW03", "Gold", 15000));
 
-        using SqlDataReader reader = cmd.ExecuteReader();
-
-        while (reader.Read())
+        while (true)
         {
-            Console.WriteLine(
-                $"{reader["CustomerId"]} | " +
-                $"{reader["FullName"]} | " +
-                $"{reader["City"]}"
-            );
+            Console.WriteLine("1. Get Jewellery Details");
+            Console.WriteLine("2. Update Price");
+            Console.WriteLine("3. Exit");
+            Console.WriteLine("Enter your choice");
+            string choice = Console.ReadLine();
+            if (choice == "1")
+            {
+                Console.WriteLine("Enter the jewellery id");
+                string id = Console.ReadLine();
+                var result = Jewelleryutility.GetJewelleryDetails(id);
+                if (result.Count == 0)
+                {
+                    Console.WriteLine("Jewellery id not found");
+                }
+                else
+                {
+                    foreach (var kvp in result)
+                    {
+                        Console.WriteLine($"{kvp.Key}   {kvp.Value}");
+                    }
+                }
+            }
+            else if (choice == "2")
+            {
+                Console.WriteLine("Enter the jewellery id");
+                string id = Console.ReadLine();
+                Console.WriteLine("Enter the price to be updated");
+                string priceInput = Console.ReadLine();
+                int price;
+                if (!int.TryParse(priceInput, out price))
+                {
+                    Console.WriteLine("Invalid price");
+                    continue;
+                }
+                var result = new Jewelleryutility().UpdateJewelleryPrice(id, price);
+                if (result.Count == 0)
+                {
+                    Console.WriteLine("Jewellery id not found");
+                }
+                else
+                {
+                    foreach (var kvp in result)
+                    {
+                        var j = kvp.Value;
+                        Console.WriteLine($"Id : {j.Id},    Type : {j.Type},    Material : {j.Material},    Price : {j.Price}");
+                    }
+                }
+            }
+            else if (choice == "3")
+            {
+                Console.WriteLine("Thank you");
+                break;
+            }
+            else
+            {
+                Console.WriteLine("Invalid choice");
+            }
         }
     }
 }
