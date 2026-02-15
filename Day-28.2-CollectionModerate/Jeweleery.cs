@@ -53,11 +53,11 @@ public class Program
             Console.WriteLine("2. Update Price");
             Console.WriteLine("3. Exit");
             Console.WriteLine("Enter your choice");
-            string choice = Console.ReadLine();
+            string choice = Console.ReadLine()!;
             if (choice == "1")
             {
                 Console.WriteLine("Enter the jewellery id");
-                string id = Console.ReadLine();
+                string id = Console.ReadLine()!;
                 var result = Jewelleryutility.GetJewelleryDetails(id);
                 if (result.Count == 0)
                 {
@@ -74,9 +74,9 @@ public class Program
             else if (choice == "2")
             {
                 Console.WriteLine("Enter the jewellery id");
-                string id = Console.ReadLine();
+                string id = Console.ReadLine()!;
                 Console.WriteLine("Enter the price to be updated");
-                string priceInput = Console.ReadLine();
+                string priceInput = Console.ReadLine()!;
                 int price;
                 if (!int.TryParse(priceInput, out price))
                 {

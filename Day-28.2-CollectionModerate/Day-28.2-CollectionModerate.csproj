@@ -6,6 +6,7 @@
     <RootNamespace>Day_28._2_CollectionModerate</RootNamespace>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <StartUpObject>Ques5</StartUpObject>
   </PropertyGroup>
 
 </Project>
