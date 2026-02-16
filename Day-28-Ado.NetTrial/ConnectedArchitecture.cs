@@ -48,20 +48,26 @@ class Program1
 
         if (op == "insert")
         {
-            Console.Write("Id: ");
+            Console.Write("CustomerId: ");
             int id = int.Parse(Console.ReadLine()!);
             Console.Write("Full Name: ");
             string fullName = Console.ReadLine() ?? "";
             Console.Write("City: ");
             string cityInsert = Console.ReadLine() ?? "";
-            
+            Console.Write("Segment: ");
+            string segment = Console.ReadLine() ?? "";
+            Console.Write("IsActive (true/false): ");
+            bool isActive = bool.Parse(Console.ReadLine() ?? "true");
 
-            string insertSql = "INSERT INTO dbo.Customers (CustomerId, FullName, City) VALUES (@id, @fullName, @city)";
+            string insertSql = "INSERT INTO dbo.Customers (CustomerId, FullName, City, Segment, IsActive, CreatedOn) VALUES (@id, @fullName, @city, @segment, @isActive, @createdOn)";
             using (SqlCommand cmdInsert = new SqlCommand(insertSql, con))
             {
                 cmdInsert.Parameters.AddWithValue("@id", id);
                 cmdInsert.Parameters.AddWithValue("@fullName", fullName);
                 cmdInsert.Parameters.AddWithValue("@city", cityInsert);
+                cmdInsert.Parameters.AddWithValue("@segment", segment);
+                cmdInsert.Parameters.AddWithValue("@isActive", isActive);
+                cmdInsert.Parameters.AddWithValue("@createdOn", DateTime.Now);
                 con.Open();
                 int rows = cmdInsert.ExecuteNonQuery();
                 Console.WriteLine($"Inserted {rows} row(s).");
@@ -71,18 +77,24 @@ class Program1
         else if (op == "update")
         {
             Console.Write("CustomerId to update: ");
-            string id = Console.ReadLine() ?? "";
+            int id = int.Parse(Console.ReadLine() ?? "0");
             Console.Write("New Full Name: ");
             string newName = Console.ReadLine() ?? "";
             Console.Write("New City: ");
             string newCity = Console.ReadLine() ?? "";
+            Console.Write("New Segment: ");
+            string newSegment = Console.ReadLine() ?? "";
+            Console.Write("IsActive (true/false): ");
+            bool isActive = bool.Parse(Console.ReadLine() ?? "true");
 
-            string updateSql = "UPDATE dbo.Customers SET FullName = @newName, City = @newCity WHERE CustomerId = @id";
+            string updateSql = "UPDATE dbo.Customers SET FullName = @newName, City = @newCity, Segment = @segment, IsActive = @isActive WHERE CustomerId = @id";
             using (SqlCommand cmdUpdate = new SqlCommand(updateSql, con))
             {
+                cmdUpdate.Parameters.AddWithValue("@id", id);
                 cmdUpdate.Parameters.AddWithValue("@newName", newName);
                 cmdUpdate.Parameters.AddWithValue("@newCity", newCity);
-                cmdUpdate.Parameters.AddWithValue("@id", id);
+                cmdUpdate.Parameters.AddWithValue("@segment", newSegment);
+                cmdUpdate.Parameters.AddWithValue("@isActive", isActive);
                 con.Open();
                 int rows = cmdUpdate.ExecuteNonQuery();
                 Console.WriteLine($"Updated {rows} row(s).");

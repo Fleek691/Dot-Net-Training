@@ -41,17 +41,17 @@ class Program2
         Console.WriteLine("\nData After INSERT:");
         DisplayTableData(ds);
 
-        // UPDATE Operation
-        Console.WriteLine("\n--- UPDATE OPERATION ---");
-        UpdateCustomer(ds, cs);
-        Console.WriteLine("\nData After UPDATE:");
-        DisplayTableData(ds);
+        // // UPDATE Operation
+        // Console.WriteLine("\n--- UPDATE OPERATION ---");
+        // UpdateCustomer(ds, cs);
+        // Console.WriteLine("\nData After UPDATE:");
+        // DisplayTableData(ds);
 
-        // DELETE Operation
-        Console.WriteLine("\n--- DELETE OPERATION ---");
-        DeleteCustomer(ds, cs);
-        Console.WriteLine("\nData After DELETE:");
-        DisplayTableData(ds);
+        // // DELETE Operation
+        // Console.WriteLine("\n--- DELETE OPERATION ---");
+        // DeleteCustomer(ds, cs);
+        // Console.WriteLine("\nData After DELETE:");
+        // DisplayTableData(ds);
     }
 
     static void DisplayTableData(DataSet ds)
@@ -82,12 +82,11 @@ class Program2
 
     static void InsertCustomer(DataSet ds, string cs)
     {
-        int newId = new Random().Next(1000, 9999);
         DataRow newRow = ds.Tables[0].NewRow();
-        newRow["CustomerId"] = newId;
-        newRow["FullName"] = "John Doe";
-        newRow["City"] = "Bangalore";
-        newRow["Segment"] = "Retail";
+        newRow["CustomerId"] = int.Parse(Console.ReadLine()!);
+        newRow["FullName"] = Console.ReadLine();
+        newRow["City"] = Console.ReadLine();
+        newRow["Segment"] = Console.ReadLine();
         newRow["IsActive"] = true;
         newRow["CreatedOn"] = DateTime.Now;
         ds.Tables[0].Rows.Add(newRow);
@@ -97,12 +96,8 @@ class Program2
         {
             SqlDataAdapter adapter = new SqlDataAdapter(cmd);
             SqlCommandBuilder cmdBuilder = new SqlCommandBuilder(adapter);
-            adapter.Update(ds, "Table");
-            Console.WriteLine($"Record Inserted Successfully! (CustomerId: {newId})");
-
-            // Reload data from database
-            ds.Tables[0].Clear();
-            adapter.Fill(ds.Tables[0]);
+            adapter.Update(ds, ds.Tables[0].TableName);
+            Console.WriteLine($"Record Inserted Successfully! (CustomerId: {newRow["CustomerId"]})");
         }
     }
 

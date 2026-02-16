@@ -40,14 +40,6 @@
     <IsActive>true</IsActive>
     <CreatedOn>2025-01-10T00:00:00+05:30</CreatedOn>
   </Table>
-  <Table>
-    <CustomerId>6337</CustomerId>
-    <FullName>John Doe</FullName>
-    <City>Bangalore</City>
-    <Segment>Retail</Segment>
-    <IsActive>true</IsActive>
-    <CreatedOn>2026-02-14T00:00:00+05:30</CreatedOn>
-  </Table>
   <Table1>
     <OrderId>5001</OrderId>
     <CustomerId>101</CustomerId>
