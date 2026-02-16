@@ -62,3 +62,4 @@ TDD-Test Driven Development
  used for automation (during runtime u can create class)
 
 u.net understanding only msi language and sql uses sha 256  and sha 15 thats y we use ado.Note
+try viewing and reading using with and without indexing

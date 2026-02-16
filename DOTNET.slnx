@@ -115,6 +115,9 @@
   <Folder Name="/Day-28-Ado.NetTrial/">
     <Project Path="Day-28-Ado.NetTrial/proj.csproj" />
   </Folder>
+  <Folder Name="/Day-29-Ado.NetwithLinq/">
+    <Project Path="Day-29-Ado.NetwithLinq/Prac.csproj" />
+  </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
   </Folder>
@@ -196,5 +199,6 @@
     <Project Path="ScenarioBased10Feb/UniverSity Course Registration System/UniverSity Course Registration System/UniverSity Course Registration System.csproj" />
   </Folder>
   <Project Path="Day-28.2-CollectionModerate/Day-28.2-CollectionModerate.csproj" />
+  
   <Project Path="ScenarioBased10Feb/ScenarioBased10Feb.csproj" />
 </Solution>
