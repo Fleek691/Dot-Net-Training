@@ -17,11 +17,12 @@ public class Catalog<T> where T : Book
     // Add item with genre indexing
     public bool AddItem(T item)
     {
-        if (_isbnSet.Add(item.ISBN)) return false;
+        if (!_isbnSet.Add(item.ISBN)) return false;
         _items.Add(item);
         if (!_genreIndex.ContainsKey(item.Genre))
         {
             _genreIndex[item.Genre] = new List<T>() { item };
+            return true;
         }
         _genreIndex[item.Genre].Add(item);
         return true;
