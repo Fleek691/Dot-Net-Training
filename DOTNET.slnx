@@ -118,6 +118,9 @@
   <Folder Name="/Day-29-Ado.NetwithLinq/">
     <Project Path="Day-29-Ado.NetwithLinq/Prac.csproj" />
   </Folder>
+  <Folder Name="/GenericAndDelegate/">
+    <Project Path="GenericAndDelegate/Prac.csproj" />
+  </Folder>
   <Folder Name="/PracticeQuestion/">
     <Project Path="PracticeQuestion/M1/M1.csproj" />
   </Folder>
@@ -191,6 +194,9 @@
   </Folder>
   <Folder Name="/PracticeQuestion/String/">
     <Project Path="PracticeQuestion/String/Ques.csproj" />
+  </Folder>
+  <Folder Name="/ScenarioBasedCollectionQuestions/">
+    <Project Path="ScenarioBasedCollectionQuestions/Prac.csproj" />
   </Folder>
   <Folder Name="/StrinPracQuestions12Feb/">
     <Project Path="StrinPracQuestions12Feb/Prac.csproj" />
