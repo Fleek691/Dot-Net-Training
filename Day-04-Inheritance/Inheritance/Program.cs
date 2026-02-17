@@ -1,2 +1,8 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿public class Progrm
+{
+    public static void Main()
+    {
+        PurchaseAccount a=new PurchaseAccount();
+        System.Console.WriteLine(a.GetPurchaseAccountDetails());
+    }
+}
