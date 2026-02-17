@@ -12,7 +12,7 @@ public class Program10
             _tries++;
             if (_tries <= 2) throw new InvalidOperationException("Temporary failure");
             return 999;
-        }, maxAttempts: 3);
+        }, maxAttempts: 0);
 
         Console.WriteLine(result);                    // Expected: 999
     }
@@ -38,7 +38,7 @@ public class Program10
             {
                 if (attempt == maxAttempts)
                 {
-                    throw;
+                    throw ;
                 }
             }
         }
