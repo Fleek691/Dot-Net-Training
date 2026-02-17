@@ -32,11 +32,7 @@ public class Program10
         {
             try
             {
-                var a= work();
-                if (a != null)
-                {
-                    return a;
-                }
+                return work();
             }
             catch (Exception)
             {
