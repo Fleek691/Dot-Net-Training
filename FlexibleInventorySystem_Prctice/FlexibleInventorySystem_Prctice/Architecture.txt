@@ -1,0 +1,24 @@
+﻿FlexibleInventorySystem/
+│
+├── Models/
+│   ├── Product.cs (Abstract Class - TODO)
+│   ├── ElectronicProduct.cs (TODO)
+│   ├── GroceryProduct.cs (TODO)
+│   └── ClothingProduct.cs (TODO)
+│
+├── Interfaces/
+│   ├── IInventoryOperations.cs (Provided)
+│   └── IReportGenerator.cs (Provided)
+│
+├── Services/
+│   └── InventoryManager.cs (Main TODO Class)
+│
+├── Exceptions/
+│   └── InventoryException.cs (TODO)
+│
+├── Utilities/
+│   ├── ProductValidator.cs (TODO)
+│   └── FileHandler.cs (Bonus TODO)
+│
+├── Program.cs (Console UI - TODO)
+└── README.md
