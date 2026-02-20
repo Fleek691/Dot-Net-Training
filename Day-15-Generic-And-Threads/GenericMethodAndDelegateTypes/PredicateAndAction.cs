@@ -10,9 +10,9 @@ namespace GenericsClass
         /// Action Delegate
         /// </summary>
         public Action<string> logger = message =>
-        {
+        
             Console.WriteLine($"[LOG]: {message} at{DateTime.Now}");
-        };
+        
         public static Action<string> NewMethod()
         {
             return message =>
