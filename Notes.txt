@@ -63,3 +63,10 @@ TDD-Test Driven Development
 
 u.net understanding only msi language and sql uses sha 256  and sha 15 thats y we use ado.Note
 try viewing and reading using with and without indexing
+
+
+
+google.com-> local vendor dictionary verifies->(IIS)if fine give ip->goes to the domain ->domain returns html->(when a tab is opened session id created)->
+the html comes back to that particular session id(fire and forget)
+device->isp->dns and then back
+CICD->continus integration continuos Development
