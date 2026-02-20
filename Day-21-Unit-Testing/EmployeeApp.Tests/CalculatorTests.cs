@@ -26,7 +26,7 @@ public class CalculatorTests
         int result = _calculator.Add(a, b);
 
         // Assert
-        Assert.That(result, Is.EqualTo(8));
+        Assert.(result, Is.EqualTo(8));
     }
 
     [Test]
