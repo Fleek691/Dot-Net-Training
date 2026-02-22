@@ -15,44 +15,54 @@ A comprehensive C# and .NET training project covering fundamental concepts throu
 
 This project is a complete C# learning journey from basics to advanced topics. It includes practical examples, assignments, and unit tests demonstrating real-world coding practices.
 
-**Latest Additions:** Topicwise practice, TopBrain assessment, exception handling questions, and PracticeQuestion projects
+**Latest Additions:** MoreQuestions modules, M1 practice sets, Async/Await practice, String/Ado.NET tracks, and scenario-based problem folders
 
 ## 📁 Project Structure
 
 ```
 Dot-Net-Training/
-├── DOTNET.slnx               # Solution file
-├── Notes.txt                 # Training notes
-├── Day-01-Basics/              # Basic C# concepts
-├── Day-02-Control/             # Control flow (loops, conditions)
-│   ├── Assignments/            # If-else, switch assignments
-│   └── AssignmentLoops/        # Loop assignments
-├── Day-03-Oops/                # Object-Oriented Programming
-├── Day-04-Inheritance/         # Inheritance concepts
-├── Day-05-Abstract-Inheri/     # Abstract classes
-├── Day-06-Interface/           # Interface implementation
-├── Day-07-Multiplnheritance/   # Multiple inheritance patterns
-├── Day-08-FolderStruct/        # Folder structure organization
-├── Day-09-Indexer-Static/      # Indexers and static members
-├── Day-10-ExtenAndRegEx/       # Extensions and Regex
-├── Day-11-Serialization-Delegates/  # Serialization and delegates
-├── Day-12-Reflection/          # Reflection
-├── Day-13-Enum/                # Enumerations
-├── Day-14-LINQ/                # LINQ queries
-├── Day-15-Generic-And-Threads/ # Generics and Threading
-├── Day-16-PracticeQuestions/   # Practice problems
-├── Day-17-MoreQuestions/       # Additional problems
-├── Day-18-Attributes/          # Custom attributes
-├── Day-19-PettyCash-Manager/   # Project: Petty Cash Manager
-├── Day-20-PracticeQuestions/   # Exception and String questions
-├── Day-21-Unit-Testing/        # Unit Testing Framework
-│   ├── EmployeeApp.Core/       # Core business logic
-│   ├── EmployeeApp.Tests/      # Unit tests
-├── Day-22-TopicwisePrac/        # Topicwise practice
-├── Day-23-TopBrainAssesment/    # Assessment tasks and NUnit cases
-├── Day-24-ExceptionHandlingQues/# Exception handling questions
-├── PracticeQuestion/            # Mini-project practice set
-└── Apps/                       # Standalone demo applications
+├── DOTNET.slnx                    # Solution file
+├── Notes.txt                      # Training notes
+├── README.md                      # Repository guide
+├── Apps/                          # Standalone demo applications
+├── Day-01-Basics/                 # Basic C# concepts
+├── Day-02-Control/                # Control flow assignments
+├── Day-03-Oops/                   # Object-oriented programming
+├── Day-04-Inheritance/            # Inheritance concepts
+├── Day-05-Abstract-Inheri/        # Abstract class practice
+├── Day-06-Interface/              # Interface implementation
+├── Day-07-Multiplnheritance/      # Multiple inheritance patterns
+├── Day-08-FolderStruct/           # Folder structure exercises
+├── Day-09-Indexer-Static/         # Indexers and static members
+├── Day-10-ExtenAndRegEx/          # Extensions and regex
+├── Day-11-Serialization-Delegates/# Serialization and delegates
+├── Day-12-Reflection/             # Reflection exercises
+├── Day-13-Enum/                   # Enumerations
+├── Day-14-LINQ/                   # LINQ queries
+├── Day-15-Generic-And-Threads/    # Generics and threading
+├── Day-16-PracticeQuestions/      # Practice problems
+├── Day-17-MoreQuestions/          # Additional questions
+├── Day-18-Attributes/             # Custom attributes
+├── Day-19-PettyCash-Manager/      # Petty cash manager project
+├── Day-20-PracticeQuestions/      # Exception/string/interface practice
+├── Day-21-Unit-Testing/           # NUnit + Moq projects
+├── Day-22-TopicwisePrac/          # Topic-wise practice
+├── Day-23-TopBrainAssesment/      # Assessment tasks
+├── Day-24-ExceptionHandlingQues/  # Exception handling scenarios
+├── Day-25-MoreQuestions/          # GymStream, LMS, Logistics
+├── Day-26.1-M1QuesPrac/           # Module-1 scenario practice
+├── Day-26.2-AsynchAwait/          # Async/Await practice
+├── Day-27-StringQues/             # String question set
+├── Day-28-Ado.NetTrial/           # ADO.NET trial work
+├── Day-28.2-CollectionModerate/   # Collection moderate-level practice
+├── Day-29-Ado.NetwithLinq/        # ADO.NET with LINQ practice
+├── FlexibleInventorySystem_Prctice/ # Inventory practice project
+├── GenericAndDelegate/            # Generic + delegate practice
+├── OopsQuestions/                 # OOP practice questions
+├── PracticeQuestion/              # General practice set
+├── ScenarioBased10Feb/            # Scenario-based exercises
+├── ScenarioBasedCollectionQuestions/ # Collection scenario questions
+└── StrinPracQuestions12Feb/       # String practice questions
 ```
 
 ## 🎓 Key Topics Covered
@@ -293,4 +303,4 @@ For questions or issues:
 
 **Last Updated:** February 2026  
 **Project Status:** Active Development  
-**Latest Focus:** Unit Testing with NUnit and Moq
+**Latest Focus:** Mixed practice across testing, async, strings, collections, and ADO.NET/LINQ
