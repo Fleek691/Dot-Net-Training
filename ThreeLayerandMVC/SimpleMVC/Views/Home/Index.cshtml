@@ -1,8 +1,82 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<SimpleMVC.Models.Employee>
+
+@{
+    ViewData["Title"] = "Employee List";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<h1>All Employees</h1>
+
+<p>
+    <a asp-action="AddEmp" class="btn btn-success">Add New Employee</a>
+</p>
+
+@if (Model != null && Model.Any())
+{
+    <table class="table table-striped table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Department ID</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.DepartmentId</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <div class="alert alert-info">
+        <strong>No employees found.</strong> Click "Add New Employee" to create one.
+    </div>
+}
+<hr />
+<h3>Countries from ViewBag</h3>
+@foreach (var country in ViewBag.Countries.Split(','))
+{
+    <p>@country</p>
+}
+
+<hr />
+<h3>Countries from ViewData (Direct Access)</h3>
+@if (ViewData["Countries"] != null)
+{
+    @foreach (var country in ViewData["Countries"].ToString().Split(','))
+    {
+        <div>@country</div>
+    }
+}
+<hr/>
+<h2>Fruits</h2>
+@foreach (var fruit in (List<string>)ViewData["Fruits"])
+{
+    <p>@fruit</p>
+}
+
+<hr />
+<h3>All ViewData Entries (Key-Value Pairs)</h3>
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Key</th>
+            <th>Value</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var kvp in ViewData)
+        {
+            <tr>
+                <td>@kvp.Key</td>
+                <td>@kvp.Value</td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,16 +1,17 @@
 ﻿@model SimpleMVC.Models.Employee
+@* here @ means razor engine to call c# files*@
 
 @{
-    ViewData["Title"] = "EmpView";
+    ViewData["Title"] = "EmployeeView";
 }
 
-<h1>EmpView</h1>
+<h1>EmployeeView</h1>
 
 <h4>Employee</h4>
 <hr />
 <div class="row">
     <div class="col-md-4">
-        <form asp-action="EmpView">
+        <form asp-action="AddEmp" method="post">
             <div asp-validation-summary="ModelOnly" class="text-danger"></div>
             <div class="form-group">
                 <label asp-for="Id" class="control-label"></label>
@@ -23,9 +24,11 @@
                 <span asp-validation-for="Name" class="text-danger"></span>
             </div>
             <div class="form-group">
-                <label asp-for="Department" class="control-label"></label>
-                <input asp-for="Department" class="form-control" />
-                <span asp-validation-for="Department" class="text-danger"></span>bbbb
+                <label asp-for="DepartmentId" class="control-label">Department</label>
+                <select asp-for="DepartmentId" class="form-control" asp-items="@(new SelectList(ViewBag.Departments, "Id", "Name"))">
+                    <option value="">-- Select Department --</option>
+                </select>
+                <span asp-validation-for="DepartmentId" class="text-danger"></span>
             </div>
             <div class="form-group">
                 <input type="submit" value="Create" class="btn btn-primary" />
@@ -39,5 +42,7 @@
 </div>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
