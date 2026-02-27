@@ -1,0 +1,18 @@
+<!doctype html>
+<html>
+<head><title>Page 1</title></head>
+<body>
+  <h1>Page 1</h1>
+
+  <input id="name" placeholder="Enter your name" />
+  <button onclick="saveAndGo()">Save & Go to Page 2</button>
+
+  <script>
+    function saveAndGo() {
+      const name = document.getElementById("name").value;
+      sessionStorage.setItem("userName", name); // store data
+      window.location.href = "page2.html";
+    }
+  </script>
+</body>
+</html>

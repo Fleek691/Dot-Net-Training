@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+<head><title>Page 4</title></head>
+<body>
+  <h1>Page 4</h1>
+  <p id="output"></p>
+
+  <script>
+    const name = sessionStorage.getItem("userName"); // read data
+    document.getElementById("output").textContent =
+      name ? `Welcome, ${name}` : "No data found in sessionStorage.";
+  </script>
+</body>
+</html>
