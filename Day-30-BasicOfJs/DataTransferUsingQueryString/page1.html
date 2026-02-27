@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page 1</title>
+</head>
+<body>
+
+<h2>Page 1</h2>
+
+<label>Name:</label>
+<input type="text" id="name"><br><br>
+
+<label>City:</label>
+<input type="text" id="city"><br><br>
+
+<button onclick="goNext()">Go to Page 2</button>
+
+<script>
+function goNext() {
+
+    var name = document.getElementById("name").value;
+    var city = document.getElementById("city").value;
+
+    // redirect with query string
+    window.location.href =
+        "page2.html?name=" + name + "&city=" + city;
+}
+</script>
