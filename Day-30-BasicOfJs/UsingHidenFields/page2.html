@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Page 2</h2>
+
+<form action="page3.html">
+
+<input type="hidden" id="studentName" name="studentName">
+<input type="hidden" id="studentLocation" name="studentLocation">
+
+<input type="submit" value="Next">
+
+</form>
+
+<script>
+var params = new URLSearchParams(window.location.search);
+
+// carry values forward silently
+document.getElementById("studentName").value = params.get("name");
+document.getElementById("studentLocation").value = params.get("city");
+</script>
+
+</body>
+</html>

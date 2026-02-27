@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>Page 3</h2>
+<p id="result"></p>
+<script>
+var params = new URLSearchParams(window.location.search);
+document.getElementById("result").innerHTML =
+ "Student: " + params.get("studentName") +
+ "<br>Location: " + params.get("studentLocation");
+</script>
+</body>
+</html>
