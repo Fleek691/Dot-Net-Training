@@ -61,7 +61,7 @@ TDD-Test Driven Development
  reflection-a way to get the info about the info the only way
  used for automation (during runtime u can create class)
 
-u.net understanding only msi language and sql uses sha 256  and sha 15 thats y we use ado.Note
+u.net understanding only msil language and sql uses sha 256  and sha 15 thats y we use ado.Note
 try viewing and reading using with and without indexing
 
 
@@ -70,3 +70,41 @@ google.com-> local vendor dictionary verifies->(IIS)if fine give ip->goes to the
 the html comes back to that particular session id(fire and forget)
 device->isp->dns and then back
 CICD->continus integration continuos Development
+
+when connecting to a database using connection string if it uses same device then firewall is bypassed easily but
+if the databse is in cloud then yu have to provide a laverage of IP Adress of the web application
+.net understanding only msil language and sql uses sha 256  and sha 15 thats y we use ado.Note
+try viewing and reading using with and without indexing
+Ado.net provides data in form of xml (drawback)xml->table then xml->row to table row
+also connection needs to be opened and closed(drawback)
+using attributes we can specify data like if isactive is int in class then in dtabase it should be bit
+
+problem in code first -what if yu make changes in class or delete a table then while updation how to manage what if the table has dependecies
+model first (good to know not necessary yet )
+scafolding command:-
+start with - connection string
+			-Databse type
+			-Directly models
+
+problems in databse first approach
+if the schema is changed then we would have to changere scafolding or update which may change the edits of our code
+nullable types
+
+dotnet ef dbcontext scaffold ^
+  "Data Source=FLEEK\\SQLEXPRESS;Initial Catalog=BikeStores;Integrated Security=True;Encrypt=False;" ^
+  Microsoft.EntityFrameworkCore.SqlServer ^
+  --context BikeStoresContext ^
+  --output-dir Models ^
+  --context-dir Data ^
+  --use-database-names ^
+  --no-pluralize
+
+  DBCOntetx-an artifact of ef approach
+{OnConfiguring()
+OnModelCreating()
+OnModelCreatingPartial}events autogeneretaed
+
+public BikeStoresContext(DbContextOptions<BikeStoresContext> options)|
+    : base(options)													 |
+{																	 |->Constructor injection
+}																	 |
