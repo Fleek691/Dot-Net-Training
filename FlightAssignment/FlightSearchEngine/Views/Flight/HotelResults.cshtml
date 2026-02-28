@@ -1,0 +1,38 @@
+﻿@model IEnumerable<FlightSearchEngine.Models.FlightHotelResult>
+
+<h2>Flight + Hotel Results</h2>
+
+@if (Model == null || !Model.Any())
+{
+    <p>No results found.</p>
+}
+else
+{
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Flight ID</th>
+                <th>Flight Name</th>
+                <th>Source</th>
+                <th>Destination</th>
+                <th>Hotel Name</th>
+                <th>Total Cost</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.FlightId</td>
+                    <td>@item.FlightName</td>
+                    <td>@item.Source</td>
+                    <td>@item.Destination</td>
+                    <td>@item.HotelName</td>
+                    <td>@item.TotalCost</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+
+<a asp-action="Index" class="btn btn-primary">Back</a>
