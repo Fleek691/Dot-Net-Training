@@ -1,0 +1,37 @@
+<!-- <input type="number" id="age">
+<button onclick="checkAge()">Check</button>
+<p id="result"></p>
+<script>
+function checkAge(){
+var age=document.getElementById("age").value;
+result.innerHTML = age>=18 ? "Eligible" : "Not eligible";
+}
+</script> -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <select id="dropdown">
+        <option value="">Select a state</option>
+        <option value="Option 1">Punjab</option>
+        <option value="Option 2">Delhi</option>
+        <option value="Option 3">Haryana</option>
+    </select>
+    <button onclick="showSelected()">Show Selected</button>
+    <p id="result"></p>
+    <script>
+        function showSelected() {
+            var dropdown = document.getElementById("dropdown");
+            var selectedValue = dropdown.options[dropdown.selectedIndex].value;
+            result.InnerHTML = selectedValue ? "Selected: " + selectedValue : alert("Please select an option");
+        }
+    </script>
+</body>
+
+</html>

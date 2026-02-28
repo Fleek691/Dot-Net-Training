@@ -1,0 +1,12 @@
+Age: <input type="number" id="age"><br>
+<input type="checkbox" id="idproof"> Have ID
+<button onclick="checkEntry()">Check</button>
+<p id="msg"></p>
+<script>
+function checkEntry(){
+if(age.value>=18 && idproof.checked)
+msg.innerHTML="Allowed";
+else
+msg.innerHTML="Denied";
+}
+</script>
