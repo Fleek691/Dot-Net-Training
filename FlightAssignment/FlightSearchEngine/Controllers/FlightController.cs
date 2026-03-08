@@ -16,11 +16,19 @@ public class FlightController : Controller
 
     public async Task<IActionResult> Index()
     {
-        var model = new SearchViewModel
+        var model = new SearchViewModel();
+
+        try
         {
-            SourceList = new SelectList(await _db.GetSourcesAsync()),
-            DestinationList = new SelectList(await _db.GetDestinationsAsync())
-        };
+            model.SourceList = new SelectList(await _db.GetSourcesAsync());
+            model.DestinationList = new SelectList(await _db.GetDestinationsAsync());
+        }
+        catch (Exception ex)
+        {
+            model.SourceList = new SelectList(Array.Empty<string>());
+            model.DestinationList = new SelectList(Array.Empty<string>());
+            ViewBag.ErrorMessage = ex.Message;
+        }
 
         return View(model);
     }
@@ -31,17 +39,25 @@ public class FlightController : Controller
     {
         if (!ModelState.IsValid)
         {
-            model.SourceList = new SelectList(await _db.GetSourcesAsync());
-            model.DestinationList = new SelectList(await _db.GetDestinationsAsync());
+            await ReloadDropdownsAsync(model);
             return View("Index", model);
         }
 
-        var results = await _db.SearchFlightsAsync(
-            model.Source!,
-            model.Destination!,
-            model.NumberOfPersons);
+        try
+        {
+            var results = await _db.SearchFlightsAsync(
+                model.Source!,
+                model.Destination!,
+                model.NumberOfPersons);
 
-        return View("Results", results);
+            return View("Results", results);
+        }
+        catch (Exception ex)
+        {
+            await ReloadDropdownsAsync(model);
+            ViewBag.ErrorMessage = ex.Message;
+            return View("Index", model);
+        }
     }
 
     [HttpPost]
@@ -50,16 +66,38 @@ public class FlightController : Controller
     {
         if (!ModelState.IsValid)
         {
-            model.SourceList = new SelectList(await _db.GetSourcesAsync());
-            model.DestinationList = new SelectList(await _db.GetDestinationsAsync());
+            await ReloadDropdownsAsync(model);
             return View("Index", model);
         }
 
-        var results = await _db.SearchFlightsWithHotelsAsync(
-            model.Source!,
-            model.Destination!,
-            model.NumberOfPersons);
+        try
+        {
+            var results = await _db.SearchFlightsWithHotelsAsync(
+                model.Source!,
+                model.Destination!,
+                model.NumberOfPersons);
 
-        return View("HotelResults", results);   // 🔥 CHANGE HERE
+            return View("HotelResults", results);
+        }
+        catch (Exception ex)
+        {
+            await ReloadDropdownsAsync(model);
+            ViewBag.ErrorMessage = ex.Message;
+            return View("Index", model);
+        }
+    }
+
+    private async Task ReloadDropdownsAsync(SearchViewModel model)
+    {
+        try
+        {
+            model.SourceList = new SelectList(await _db.GetSourcesAsync());
+            model.DestinationList = new SelectList(await _db.GetDestinationsAsync());
+        }
+        catch
+        {
+            model.SourceList = new SelectList(Array.Empty<string>());
+            model.DestinationList = new SelectList(Array.Empty<string>());
+        }
     }
 }

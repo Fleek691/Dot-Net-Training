@@ -17,119 +17,160 @@ public class DatabaseHelper
     {
         var list = new List<string>();
 
-        await using (SqlConnection conn = new SqlConnection(_connectionString))
+        try
         {
-            await using (SqlCommand cmd = new SqlCommand("sp_GetSources", conn))
+            await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                await conn.OpenAsync();
-
-                await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
+                await using (SqlCommand cmd = new SqlCommand("sp_GetSources", conn))
                 {
-                    while (await reader.ReadAsync())
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    await conn.OpenAsync();
+
+                    await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
                     {
-                        list.Add(reader["Source"].ToString() ?? string.Empty);
+                        while (await reader.ReadAsync())
+                        {
+                            list.Add(reader["Source"].ToString() ?? string.Empty);
+                        }
                     }
                 }
             }
-        }
 
-        return list;
+            return list;
+        }
+        catch (SqlException ex)
+        {
+            throw CreateFriendlyDatabaseException(ex);
+        }
     }
 
     public async Task<List<string>> GetDestinationsAsync()
     {
         var list = new List<string>();
 
-        await using (SqlConnection conn = new SqlConnection(_connectionString))
+        try
         {
-            await using (SqlCommand cmd = new SqlCommand("sp_GetDestinations", conn))
+            await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                await conn.OpenAsync();
-
-                await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
+                await using (SqlCommand cmd = new SqlCommand("sp_GetDestinations", conn))
                 {
-                    while (await reader.ReadAsync())
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    await conn.OpenAsync();
+
+                    await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
                     {
-                        list.Add(reader["Destination"].ToString() ?? string.Empty);
+                        while (await reader.ReadAsync())
+                        {
+                            list.Add(reader["Destination"].ToString() ?? string.Empty);
+                        }
                     }
                 }
             }
-        }
 
-        return list;
+            return list;
+        }
+        catch (SqlException ex)
+        {
+            throw CreateFriendlyDatabaseException(ex);
+        }
     }
 
     public async Task<List<FlightResult>> SearchFlightsAsync(string source, string destination, int persons)
     {
         var list = new List<FlightResult>();
 
-        await using (SqlConnection conn = new SqlConnection(_connectionString))
+        try
         {
-            await using (SqlCommand cmd = new SqlCommand("sp_SearchFlights", conn))
+            await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Source", source);
-                cmd.Parameters.AddWithValue("@Destination", destination);
-                cmd.Parameters.AddWithValue("@Persons", persons);
-
-                await conn.OpenAsync();
-
-                await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
+                await using (SqlCommand cmd = new SqlCommand("sp_SearchFlights", conn))
                 {
-                    while (await reader.ReadAsync())
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Source", source);
+                    cmd.Parameters.AddWithValue("@Destination", destination);
+                    cmd.Parameters.AddWithValue("@Persons", persons);
+
+                    await conn.OpenAsync();
+
+                    await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
                     {
-                        list.Add(new FlightResult
+                        while (await reader.ReadAsync())
                         {
-                            FlightId = (int)reader["FlightId"],
-                            FlightName = reader["FlightName"].ToString() ?? string.Empty,
-                            FlightType = reader["FlightType"].ToString() ?? string.Empty,
-                            Source = reader["Source"].ToString() ?? string.Empty,
-                            Destination = reader["Destination"].ToString() ?? string.Empty,
-                            TotalCost = (decimal)reader["TotalCost"]
-                        });
+                            list.Add(new FlightResult
+                            {
+                                FlightId = (int)reader["FlightId"],
+                                FlightName = reader["FlightName"].ToString() ?? string.Empty,
+                                FlightType = reader["FlightType"].ToString() ?? string.Empty,
+                                Source = reader["Source"].ToString() ?? string.Empty,
+                                Destination = reader["Destination"].ToString() ?? string.Empty,
+                                TotalCost = (decimal)reader["TotalCost"]
+                            });
+                        }
                     }
                 }
             }
-        }
 
-        return list;
+            return list;
+        }
+        catch (SqlException ex)
+        {
+            throw CreateFriendlyDatabaseException(ex);
+        }
     }
 
     public async Task<List<FlightHotelResult>> SearchFlightsWithHotelsAsync(string source, string destination, int persons)
     {
         var list = new List<FlightHotelResult>();
 
-        await using (SqlConnection conn = new SqlConnection(_connectionString))
+        try
         {
-            await using (SqlCommand cmd = new SqlCommand("sp_SearchFlightsWithHotels", conn))
+            await using (SqlConnection conn = new SqlConnection(_connectionString))
             {
-                cmd.CommandType = CommandType.StoredProcedure;
-                cmd.Parameters.AddWithValue("@Source", source);
-                cmd.Parameters.AddWithValue("@Destination", destination);
-                cmd.Parameters.AddWithValue("@Persons", persons);
-
-                await conn.OpenAsync();
-
-                await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
+                await using (SqlCommand cmd = new SqlCommand("sp_SearchFlightsWithHotels", conn))
                 {
-                    while (await reader.ReadAsync())
+                    cmd.CommandType = CommandType.StoredProcedure;
+                    cmd.Parameters.AddWithValue("@Source", source);
+                    cmd.Parameters.AddWithValue("@Destination", destination);
+                    cmd.Parameters.AddWithValue("@Persons", persons);
+
+                    await conn.OpenAsync();
+
+                    await using (var reader = await cmd.ExecuteReaderAsync(CommandBehavior.CloseConnection))
                     {
-                        list.Add(new FlightHotelResult
+                        while (await reader.ReadAsync())
                         {
-                            FlightId = (int)reader["FlightId"],
-                            FlightName = reader["FlightName"].ToString() ?? string.Empty,
-                            Source = reader["Source"].ToString() ?? string.Empty,
-                            Destination = reader["Destination"].ToString() ?? string.Empty,
-                            HotelName = reader["HotelName"].ToString() ?? string.Empty,
-                            TotalCost = (decimal)reader["TotalCost"]
-                        });
+                            list.Add(new FlightHotelResult
+                            {
+                                FlightId = (int)reader["FlightId"],
+                                FlightName = reader["FlightName"].ToString() ?? string.Empty,
+                                Source = reader["Source"].ToString() ?? string.Empty,
+                                Destination = reader["Destination"].ToString() ?? string.Empty,
+                                HotelName = reader["HotelName"].ToString() ?? string.Empty,
+                                TotalCost = (decimal)reader["TotalCost"]
+                            });
+                        }
                     }
                 }
             }
+
+            return list;
+        }
+        catch (SqlException ex)
+        {
+            throw CreateFriendlyDatabaseException(ex);
+        }
+    }
+
+    private static Exception CreateFriendlyDatabaseException(SqlException ex)
+    {
+        // 208 = Invalid object name, 2812 = Could not find stored procedure.
+        if (ex.Number == 208 || ex.Number == 2812)
+        {
+            return new InvalidOperationException(
+                "Database objects are not aligned with the app. Check stored procedures and tables in the configured database.",
+                ex);
         }
 
-        return list;
+        return ex;
     }
 }
