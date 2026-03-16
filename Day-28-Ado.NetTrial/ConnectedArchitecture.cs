@@ -5,8 +5,8 @@ class Program1
 {
     static void Main()
     {
-        string cs =
-        "Data Source=FLEEK\\SQLEXPRESS;Initial Catalog=Customer-Order;Integrated Security=True;Encrypt=False;";
+        string cs ="Data Source=FLEEK\\SQLEXPRESS;Initial Catalog=Customer-Order;Integrated Security=True;Encrypt=False;";
+
         using SqlConnection con = new SqlConnection(cs);
 
         //some version in place of Database use Initital Catalog keyword

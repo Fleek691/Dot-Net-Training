@@ -108,3 +108,5 @@ public BikeStoresContext(DbContextOptions<BikeStoresContext> options)|
     : base(options)													 |
 {																	 |->Constructor injection
 }																	 |
+
+GDPR->General Data Production Regulationns
