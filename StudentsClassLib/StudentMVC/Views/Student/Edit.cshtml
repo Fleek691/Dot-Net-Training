@@ -1,0 +1,59 @@
+@model EditStudentViewModel
+
+<h2>Edit Student</h2>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <div class="alert alert-danger">
+        <ul>
+            @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+            {
+                <li>@error.ErrorMessage</li>
+            }
+        </ul>
+    </div>
+}
+
+<form asp-action="Edit" asp-route-id="@Model.StudentId" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="StudentId" />
+    <input type="hidden" asp-for="Status" />
+    <input type="hidden" asp-for="JoinDate" />
+    
+    <div class="form-group mb-3">
+        <label asp-for="FullName" class="form-label"></label>
+        <input asp-for="FullName" class="form-control" />
+        <span asp-validation-for="FullName" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Email" class="form-label"></label>
+        <input asp-for="Email" type="email" class="form-control" />
+        <span asp-validation-for="Email" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label asp-for="Phone" class="form-label"></label>
+        <input asp-for="Phone" class="form-control" />
+        <span asp-validation-for="Phone" class="text-danger"></span>
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Status</label>
+        <input type="text" value="@Model.Status" class="form-control" readonly disabled />
+    </div>
+
+    <div class="form-group mb-3">
+        <label class="form-label">Join Date</label>
+        <input type="text" value="@Model.JoinDate.ToString("MM/dd/yyyy")" class="form-control" readonly disabled />
+    </div>
+
+    <div class="form-group">
+        <button type="submit" class="btn btn-primary">Update</button>
+        <a asp-action="Index" class="btn btn-secondary">Cancel</a>
+    </div>
+</form>
+
+@section Scripts {
+    <partial name="_ValidationScriptsPartial" />
+}
