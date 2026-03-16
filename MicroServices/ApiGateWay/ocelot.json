@@ -1,0 +1,42 @@
+{
+    "Routes": [
+        {
+            "DownstreamPathTemplate": "/api/catalog/products",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5089 }],
+            "UpstreamPathTemplate": "/api/catalog/products",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/cart",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5112 }],
+            "UpstreamPathTemplate": "/api/cart",
+            "UpstreamHttpMethod": [ "Get" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/payment/pay",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5041 }],
+            "UpstreamPathTemplate": "/api/payment/pay",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/notification/send",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5238 }],
+            "UpstreamPathTemplate": "/api/notification/send",
+            "UpstreamHttpMethod": [ "Post" ]
+        },
+        {
+            "DownstreamPathTemplate": "/api/home",
+            "DownstreamScheme": "http",
+            "DownstreamHostAndPorts": [{ "Host": "localhost", "Port": 5159 }],
+            "UpstreamPathTemplate": "/api/home",
+            "UpstreamHttpMethod": [ "Get" ]
+        }
+    ],
+    "GlobalConfiguration": {
+        "BaseUrl": "http://localhost:5059"
+    }
+}
